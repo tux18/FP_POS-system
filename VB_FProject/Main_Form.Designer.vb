@@ -101,7 +101,7 @@ Partial Class Main_Form
         Me.customer.Text = "CUSTOMER"
         Me.customer.UseVisualStyleBackColor = False
         '
-        'Form1
+        'Main_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -109,7 +109,7 @@ Partial Class Main_Form
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(862, 424)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "Form1"
+        Me.Name = "Main_Form"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
