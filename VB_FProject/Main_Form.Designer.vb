@@ -50,7 +50,7 @@ Partial Class Main_Form
         Me.Panel2.Controls.Add(Me.help_btn)
         Me.Panel2.Location = New System.Drawing.Point(0, 263)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(301, 67)
+        Me.Panel2.Size = New System.Drawing.Size(307, 67)
         Me.Panel2.TabIndex = 6
         '
         'Label1
@@ -84,7 +84,7 @@ Partial Class Main_Form
         Me.admin.Name = "admin"
         Me.admin.Size = New System.Drawing.Size(260, 34)
         Me.admin.TabIndex = 3
-        Me.admin.Text = "ADMINISTRATOR"
+        Me.admin.Text = "ADMINISTRATION"
         Me.admin.UseVisualStyleBackColor = False
         '
         'customer
@@ -98,7 +98,7 @@ Partial Class Main_Form
         Me.customer.Name = "customer"
         Me.customer.Size = New System.Drawing.Size(260, 68)
         Me.customer.TabIndex = 2
-        Me.customer.Text = "CUSTOMER"
+        Me.customer.Text = "USER"
         Me.customer.UseVisualStyleBackColor = False
         '
         'Main_Form
@@ -110,7 +110,7 @@ Partial Class Main_Form
         Me.ClientSize = New System.Drawing.Size(862, 424)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "Main_Form"
-        Me.Text = "Form1"
+        Me.Text = "Main"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
