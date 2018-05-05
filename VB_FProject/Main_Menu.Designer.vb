@@ -22,11 +22,10 @@ Partial Class Main_Menu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main_Menu))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.logout = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -62,6 +61,8 @@ Partial Class Main_Menu
         Me.aa = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.user_info.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -75,7 +76,6 @@ Partial Class Main_Menu
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.logout)
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button2)
@@ -85,19 +85,6 @@ Partial Class Main_Menu
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(257, 631)
         Me.Panel1.TabIndex = 0
-        '
-        'logout
-        '
-        Me.logout.BackColor = System.Drawing.Color.White
-        Me.logout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.logout.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.logout.Location = New System.Drawing.Point(0, 518)
-        Me.logout.Name = "logout"
-        Me.logout.Size = New System.Drawing.Size(257, 49)
-        Me.logout.TabIndex = 5
-        Me.logout.Text = "Logout"
-        Me.logout.UseVisualStyleBackColor = False
         '
         'Button4
         '
@@ -212,8 +199,8 @@ Partial Class Main_Menu
         '
         'prodname
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.prodname.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.prodname.DefaultCellStyle = DataGridViewCellStyle11
         Me.prodname.HeaderText = "Product Name"
         Me.prodname.Name = "prodname"
         Me.prodname.Width = 170
@@ -326,8 +313,8 @@ Partial Class Main_Menu
         '
         'DataGridViewTextBoxColumn1
         '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle12
         Me.DataGridViewTextBoxColumn1.HeaderText = "Product Name"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
@@ -363,13 +350,16 @@ Partial Class Main_Menu
         '
         'search
         '
-        Me.search.Location = New System.Drawing.Point(608, 110)
+        Me.search.ImeMode = System.Windows.Forms.ImeMode.Alpha
+        Me.search.Location = New System.Drawing.Point(609, 110)
+        Me.search.MaxLength = 200
         Me.search.Name = "search"
-        Me.search.Size = New System.Drawing.Size(177, 20)
+        Me.search.Size = New System.Drawing.Size(176, 20)
         Me.search.TabIndex = 5
         '
         'Panel5
         '
+        Me.Panel5.Controls.Add(Me.Label5)
         Me.Panel5.Controls.Add(Me.Label4)
         Me.Panel5.Controls.Add(Me.total)
         Me.Panel5.Controls.Add(Me.Label2)
@@ -458,11 +448,31 @@ Partial Class Main_Menu
         Me.Panel8.Size = New System.Drawing.Size(60, 50)
         Me.Panel8.TabIndex = 2
         '
+        'Panel9
+        '
+        Me.Panel9.BackgroundImage = CType(resources.GetObject("Panel9.BackgroundImage"), System.Drawing.Image)
+        Me.Panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Panel9.Location = New System.Drawing.Point(560, 102)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(43, 36)
+        Me.Panel9.TabIndex = 7
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(246, 27)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(264, 15)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "** Note: All Products is Subject to 12% VAT"
+        '
         'Main_Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1292, 577)
+        Me.Controls.Add(Me.Panel9)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.search)
@@ -491,7 +501,6 @@ Partial Class Main_Menu
     Friend WithEvents Panel3 As Panel
     Friend WithEvents user_info As Panel
     Friend WithEvents Button1 As Button
-    Friend WithEvents logout As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
@@ -525,4 +534,6 @@ Partial Class Main_Menu
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel8 As Panel
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents Label5 As Label
 End Class
