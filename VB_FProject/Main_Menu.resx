@@ -181,7 +181,7 @@
         dsJ/ATjTvdh8hbqKAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Panel8.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="info.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
         7AAAAewB3p0QPgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKeSURBVFhH7ZfP
@@ -250,4 +250,7 @@
         VM+Cswh0ibiMzP9QLje2sav7cOVzmc7vvHD1N3/2kkLhH9bB8fqTzFngAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="tooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

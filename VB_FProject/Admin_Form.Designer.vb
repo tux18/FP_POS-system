@@ -25,12 +25,12 @@ Partial Class Admin_Form
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.password = New System.Windows.Forms.TextBox()
         Me.username = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -67,35 +67,6 @@ Partial Class Admin_Form
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(252, 181)
         Me.Panel1.TabIndex = 5
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.White
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button2.Location = New System.Drawing.Point(66, 69)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(221, 28)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "CANCEL"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(66, 7)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(221, 47)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "LOGIN"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -142,6 +113,36 @@ Partial Class Admin_Form
         Me.username.Name = "username"
         Me.username.Size = New System.Drawing.Size(221, 31)
         Me.username.TabIndex = 0
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.White
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Button2.Location = New System.Drawing.Point(66, 69)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(221, 28)
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "CANCEL"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(66, 7)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(221, 47)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "LOGIN"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Panel3
         '

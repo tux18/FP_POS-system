@@ -22,6 +22,7 @@ Partial Class Main_Menu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main_Menu))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -35,7 +36,7 @@ Partial Class Main_Menu
         Me.aa = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.info = New System.Windows.Forms.Panel()
         Me.main_logout = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -63,6 +64,8 @@ Partial Class Main_Menu
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.tooltip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.payment = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.user_info.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -190,7 +193,7 @@ Partial Class Main_Menu
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.Panel8)
+        Me.Panel3.Controls.Add(Me.info)
         Me.Panel3.Controls.Add(Me.main_logout)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Location = New System.Drawing.Point(256, 12)
@@ -198,15 +201,15 @@ Partial Class Main_Menu
         Me.Panel3.Size = New System.Drawing.Size(1044, 63)
         Me.Panel3.TabIndex = 1
         '
-        'Panel8
+        'info
         '
-        Me.Panel8.BackgroundImage = CType(resources.GetObject("Panel8.BackgroundImage"), System.Drawing.Image)
-        Me.Panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Panel8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel8.Location = New System.Drawing.Point(858, 10)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(60, 50)
-        Me.Panel8.TabIndex = 2
+        Me.info.BackgroundImage = CType(resources.GetObject("info.BackgroundImage"), System.Drawing.Image)
+        Me.info.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.info.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.info.Location = New System.Drawing.Point(858, 10)
+        Me.info.Name = "info"
+        Me.info.Size = New System.Drawing.Size(60, 50)
+        Me.info.TabIndex = 2
         '
         'main_logout
         '
@@ -400,6 +403,7 @@ Partial Class Main_Menu
         '
         'Panel5
         '
+        Me.Panel5.Controls.Add(Me.payment)
         Me.Panel5.Controls.Add(Me.Label5)
         Me.Panel5.Controls.Add(Me.Label4)
         Me.Panel5.Controls.Add(Me.total)
@@ -424,7 +428,7 @@ Partial Class Main_Menu
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Agency FB", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(271, 64)
+        Me.Label4.Location = New System.Drawing.Point(269, 64)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(43, 42)
         Me.Label4.TabIndex = 3
@@ -434,7 +438,7 @@ Partial Class Main_Menu
         '
         Me.total.AutoSize = True
         Me.total.Font = New System.Drawing.Font("Agency FB", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.total.Location = New System.Drawing.Point(320, 64)
+        Me.total.Location = New System.Drawing.Point(330, 64)
         Me.total.Name = "total"
         Me.total.Size = New System.Drawing.Size(69, 42)
         Me.total.TabIndex = 2
@@ -467,11 +471,27 @@ Partial Class Main_Menu
         Me.Panel9.Size = New System.Drawing.Size(43, 36)
         Me.Panel9.TabIndex = 7
         '
+        'payment
+        '
+        Me.payment.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
+        Me.payment.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.payment.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
+        Me.payment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.payment.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.payment.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.payment.Location = New System.Drawing.Point(12, 61)
+        Me.payment.Name = "payment"
+        Me.payment.Size = New System.Drawing.Size(179, 45)
+        Me.payment.TabIndex = 6
+        Me.payment.Text = "Payment"
+        Me.payment.UseVisualStyleBackColor = False
+        '
         'Main_Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1292, 577)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Panel9)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.DataGridView1)
@@ -480,6 +500,11 @@ Partial Class Main_Menu
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(1308, 616)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(1308, 616)
         Me.Name = "Main_Menu"
         Me.Text = "Main_Menu"
         Me.Panel1.ResumeLayout(False)
@@ -533,7 +558,9 @@ Partial Class Main_Menu
     Friend WithEvents total As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents Panel8 As Panel
+    Friend WithEvents info As Panel
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Label5 As Label
+    Friend WithEvents tooltip As ToolTip
+    Friend WithEvents payment As Button
 End Class

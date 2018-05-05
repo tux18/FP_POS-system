@@ -9,7 +9,7 @@ Public Class Login_Interface
     End Sub
 
     Private Sub Cust_Cancel_Click(sender As Object, e As EventArgs) Handles login_cancel.Click
-        Me.Close()
+        Me.Dispose()
 
         main.Show()
     End Sub
@@ -22,5 +22,11 @@ Public Class Login_Interface
 
     Private Sub Login_Interface_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Application.Exit()
+    End Sub
+
+    Private Sub register_Click(sender As Object, e As EventArgs) Handles register.Click
+        Me.Dispose()
+        Dim reg = New registration()
+        reg.Show()
     End Sub
 End Class

@@ -24,10 +24,11 @@ Partial Class Login_Interface
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login_Interface))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.pass_icon = New System.Windows.Forms.Panel()
-        Me.password = New System.Windows.Forms.TextBox()
         Me.user_icon = New System.Windows.Forms.Panel()
         Me.username = New System.Windows.Forms.TextBox()
+        Me.pass_icon = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.password = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -36,7 +37,6 @@ Partial Class Login_Interface
         Me.login = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.user_icon.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -57,24 +57,6 @@ Partial Class Login_Interface
         Me.Panel1.Size = New System.Drawing.Size(418, 205)
         Me.Panel1.TabIndex = 3
         '
-        'pass_icon
-        '
-        Me.pass_icon.BackgroundImage = CType(resources.GetObject("pass_icon.BackgroundImage"), System.Drawing.Image)
-        Me.pass_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pass_icon.Location = New System.Drawing.Point(71, 108)
-        Me.pass_icon.Name = "pass_icon"
-        Me.pass_icon.Size = New System.Drawing.Size(29, 27)
-        Me.pass_icon.TabIndex = 6
-        '
-        'password
-        '
-        Me.password.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.password.Location = New System.Drawing.Point(106, 108)
-        Me.password.Name = "password"
-        Me.password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.password.Size = New System.Drawing.Size(241, 26)
-        Me.password.TabIndex = 0
-        '
         'user_icon
         '
         Me.user_icon.BackgroundImage = CType(resources.GetObject("user_icon.BackgroundImage"), System.Drawing.Image)
@@ -92,6 +74,32 @@ Partial Class Login_Interface
         Me.username.Name = "username"
         Me.username.Size = New System.Drawing.Size(249, 26)
         Me.username.TabIndex = 0
+        '
+        'pass_icon
+        '
+        Me.pass_icon.BackgroundImage = CType(resources.GetObject("pass_icon.BackgroundImage"), System.Drawing.Image)
+        Me.pass_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pass_icon.Location = New System.Drawing.Point(71, 108)
+        Me.pass_icon.Name = "pass_icon"
+        Me.pass_icon.Size = New System.Drawing.Size(29, 27)
+        Me.pass_icon.TabIndex = 6
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(106, 50)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(241, 26)
+        Me.TextBox1.TabIndex = 1
+        '
+        'password
+        '
+        Me.password.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.password.Location = New System.Drawing.Point(106, 108)
+        Me.password.Name = "password"
+        Me.password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.password.Size = New System.Drawing.Size(241, 26)
+        Me.password.TabIndex = 0
         '
         'Label2
         '
@@ -131,6 +139,7 @@ Partial Class Login_Interface
         'register
         '
         Me.register.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.register.Cursor = System.Windows.Forms.Cursors.Hand
         Me.register.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.register.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.register.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -145,6 +154,7 @@ Partial Class Login_Interface
         'login_cancel
         '
         Me.login_cancel.BackColor = System.Drawing.Color.White
+        Me.login_cancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.login_cancel.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.login_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.login_cancel.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -159,6 +169,7 @@ Partial Class Login_Interface
         'login
         '
         Me.login.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.login.Cursor = System.Windows.Forms.Cursors.Hand
         Me.login.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.login.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -189,14 +200,6 @@ Partial Class Login_Interface
         Me.Label4.Size = New System.Drawing.Size(161, 32)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Login Here"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(106, 50)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(241, 26)
-        Me.TextBox1.TabIndex = 1
         '
         'Login_Interface
         '
