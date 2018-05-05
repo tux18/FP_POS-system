@@ -8,5 +8,7 @@
 
     End Sub
 
+    Private Sub main_logout_Paint(sender As Object, e As PaintEventArgs) Handles main_logout.Paint
 
+    End Sub
 End Class
