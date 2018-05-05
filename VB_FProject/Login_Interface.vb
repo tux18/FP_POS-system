@@ -20,5 +20,7 @@ Public Class Login_Interface
         Me.Hide()
     End Sub
 
-
+    Private Sub Login_Interface_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Application.Exit()
+    End Sub
 End Class

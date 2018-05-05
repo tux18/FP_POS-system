@@ -22,16 +22,20 @@ Partial Class Main_Menu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main_Menu))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.user_info = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.aa = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
         Me.main_logout = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -53,16 +57,12 @@ Partial Class Main_Menu
         Me.purchase = New System.Windows.Forms.Button()
         Me.search = New System.Windows.Forms.TextBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.total = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.aa = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.total = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.user_info.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -156,6 +156,37 @@ Partial Class Main_Menu
         Me.user_info.Size = New System.Drawing.Size(247, 175)
         Me.user_info.TabIndex = 2
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label3.Location = New System.Drawing.Point(101, 144)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(79, 15)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "User Name"
+        '
+        'aa
+        '
+        Me.aa.AutoSize = True
+        Me.aa.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.aa.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.aa.Location = New System.Drawing.Point(30, 144)
+        Me.aa.Name = "aa"
+        Me.aa.Size = New System.Drawing.Size(75, 15)
+        Me.aa.TabIndex = 7
+        Me.aa.Text = "Welcome, "
+        '
+        'Panel7
+        '
+        Me.Panel7.BackgroundImage = CType(resources.GetObject("Panel7.BackgroundImage"), System.Drawing.Image)
+        Me.Panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Panel7.Location = New System.Drawing.Point(33, 3)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(171, 138)
+        Me.Panel7.TabIndex = 7
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(122, Byte), Integer))
@@ -166,6 +197,16 @@ Partial Class Main_Menu
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1044, 63)
         Me.Panel3.TabIndex = 1
+        '
+        'Panel8
+        '
+        Me.Panel8.BackgroundImage = CType(resources.GetObject("Panel8.BackgroundImage"), System.Drawing.Image)
+        Me.Panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Panel8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Panel8.Location = New System.Drawing.Point(858, 10)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(60, 50)
+        Me.Panel8.TabIndex = 2
         '
         'main_logout
         '
@@ -199,8 +240,8 @@ Partial Class Main_Menu
         '
         'prodname
         '
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.prodname.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.prodname.DefaultCellStyle = DataGridViewCellStyle1
         Me.prodname.HeaderText = "Product Name"
         Me.prodname.Name = "prodname"
         Me.prodname.Width = 170
@@ -313,8 +354,8 @@ Partial Class Main_Menu
         '
         'DataGridViewTextBoxColumn1
         '
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewTextBoxColumn1.HeaderText = "Product Name"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
@@ -369,33 +410,15 @@ Partial Class Main_Menu
         Me.Panel5.Size = New System.Drawing.Size(513, 114)
         Me.Panel5.TabIndex = 6
         '
-        'Panel6
+        'Label5
         '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
-        Me.Panel6.Location = New System.Drawing.Point(3, 45)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(510, 10)
-        Me.Panel6.TabIndex = 0
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Imprint MT Shadow", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(18, 14)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(159, 28)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Total Amount"
-        '
-        'total
-        '
-        Me.total.AutoSize = True
-        Me.total.Font = New System.Drawing.Font("Agency FB", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.total.Location = New System.Drawing.Point(320, 64)
-        Me.total.Name = "total"
-        Me.total.Size = New System.Drawing.Size(69, 42)
-        Me.total.TabIndex = 2
-        Me.total.Text = "0.00"
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(246, 27)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(264, 15)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "** Note: All Products is Subject to 12% VAT"
         '
         'Label4
         '
@@ -407,46 +430,33 @@ Partial Class Main_Menu
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "₱"
         '
-        'Panel7
+        'total
         '
-        Me.Panel7.BackgroundImage = CType(resources.GetObject("Panel7.BackgroundImage"), System.Drawing.Image)
-        Me.Panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Panel7.Location = New System.Drawing.Point(33, 3)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(171, 138)
-        Me.Panel7.TabIndex = 7
+        Me.total.AutoSize = True
+        Me.total.Font = New System.Drawing.Font("Agency FB", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.total.Location = New System.Drawing.Point(320, 64)
+        Me.total.Name = "total"
+        Me.total.Size = New System.Drawing.Size(69, 42)
+        Me.total.TabIndex = 2
+        Me.total.Text = "0.00"
         '
-        'aa
+        'Label2
         '
-        Me.aa.AutoSize = True
-        Me.aa.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.aa.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.aa.Location = New System.Drawing.Point(30, 144)
-        Me.aa.Name = "aa"
-        Me.aa.Size = New System.Drawing.Size(75, 15)
-        Me.aa.TabIndex = 7
-        Me.aa.Text = "Welcome, "
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Imprint MT Shadow", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(18, 14)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(159, 28)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Total Amount"
         '
-        'Label3
+        'Panel6
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label3.Location = New System.Drawing.Point(101, 144)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(79, 15)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "User Name"
-        '
-        'Panel8
-        '
-        Me.Panel8.BackgroundImage = CType(resources.GetObject("Panel8.BackgroundImage"), System.Drawing.Image)
-        Me.Panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Panel8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel8.Location = New System.Drawing.Point(858, 10)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(60, 50)
-        Me.Panel8.TabIndex = 2
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.Panel6.Location = New System.Drawing.Point(3, 45)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(510, 10)
+        Me.Panel6.TabIndex = 0
         '
         'Panel9
         '
@@ -456,16 +466,6 @@ Partial Class Main_Menu
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(43, 36)
         Me.Panel9.TabIndex = 7
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(246, 27)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(264, 15)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "** Note: All Products is Subject to 12% VAT"
         '
         'Main_Menu
         '
