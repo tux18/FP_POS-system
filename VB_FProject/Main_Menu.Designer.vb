@@ -27,10 +27,10 @@ Partial Class Main_Menu
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.for_gpu = New System.Windows.Forms.Button()
+        Me.for_ram = New System.Windows.Forms.Button()
+        Me.for_motherboard = New System.Windows.Forms.Button()
+        Me.for_processor = New System.Windows.Forms.Button()
         Me.user_info = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.aa = New System.Windows.Forms.Label()
@@ -38,7 +38,7 @@ Partial Class Main_Menu
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.info = New System.Windows.Forms.Panel()
         Me.main_logout = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.change_name = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.prodname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -51,6 +51,8 @@ Partial Class Main_Menu
         Me.Button5 = New System.Windows.Forms.Button()
         Me.display_name = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -58,6 +60,7 @@ Partial Class Main_Menu
         Me.purchase = New System.Windows.Forms.Button()
         Me.search = New System.Windows.Forms.TextBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.payment = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.total = New System.Windows.Forms.Label()
@@ -65,13 +68,13 @@ Partial Class Main_Menu
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.tooltip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.payment = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.user_info.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel8.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
@@ -79,75 +82,75 @@ Partial Class Main_Menu
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Button4)
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.for_gpu)
+        Me.Panel1.Controls.Add(Me.for_ram)
+        Me.Panel1.Controls.Add(Me.for_motherboard)
+        Me.Panel1.Controls.Add(Me.for_processor)
         Me.Panel1.Controls.Add(Me.user_info)
         Me.Panel1.Location = New System.Drawing.Point(0, -3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(257, 631)
         Me.Panel1.TabIndex = 0
         '
-        'Button4
+        'for_gpu
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button4.Location = New System.Drawing.Point(0, 414)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(257, 49)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "GPU(Graphics Card)"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.for_gpu.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.for_gpu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.for_gpu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.for_gpu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.for_gpu.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.for_gpu.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.for_gpu.Location = New System.Drawing.Point(0, 414)
+        Me.for_gpu.Name = "for_gpu"
+        Me.for_gpu.Size = New System.Drawing.Size(257, 49)
+        Me.for_gpu.TabIndex = 3
+        Me.for_gpu.Text = "GPU(Graphics Card)"
+        Me.for_gpu.UseVisualStyleBackColor = False
         '
-        'Button3
+        'for_ram
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Location = New System.Drawing.Point(0, 348)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(257, 49)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "RAM"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.for_ram.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.for_ram.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.for_ram.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.for_ram.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.for_ram.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.for_ram.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.for_ram.Location = New System.Drawing.Point(0, 359)
+        Me.for_ram.Name = "for_ram"
+        Me.for_ram.Size = New System.Drawing.Size(257, 49)
+        Me.for_ram.TabIndex = 4
+        Me.for_ram.Text = "RAM"
+        Me.for_ram.UseVisualStyleBackColor = False
         '
-        'Button2
+        'for_motherboard
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(0, 284)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(257, 49)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Motherboard"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.for_motherboard.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.for_motherboard.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.for_motherboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.for_motherboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.for_motherboard.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.for_motherboard.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.for_motherboard.Location = New System.Drawing.Point(0, 304)
+        Me.for_motherboard.Name = "for_motherboard"
+        Me.for_motherboard.Size = New System.Drawing.Size(257, 49)
+        Me.for_motherboard.TabIndex = 3
+        Me.for_motherboard.Text = "Motherboard"
+        Me.for_motherboard.UseVisualStyleBackColor = False
         '
-        'Button1
+        'for_processor
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(0, 220)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(257, 49)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Processor"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.for_processor.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.for_processor.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.for_processor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.for_processor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.for_processor.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.for_processor.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.for_processor.Location = New System.Drawing.Point(0, 249)
+        Me.for_processor.Name = "for_processor"
+        Me.for_processor.Size = New System.Drawing.Size(257, 49)
+        Me.for_processor.TabIndex = 2
+        Me.for_processor.Text = "Processor"
+        Me.for_processor.UseVisualStyleBackColor = False
         '
         'user_info
         '
@@ -195,7 +198,7 @@ Partial Class Main_Menu
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(122, Byte), Integer))
         Me.Panel3.Controls.Add(Me.info)
         Me.Panel3.Controls.Add(Me.main_logout)
-        Me.Panel3.Controls.Add(Me.Label1)
+        Me.Panel3.Controls.Add(Me.change_name)
         Me.Panel3.Location = New System.Drawing.Point(256, 12)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1044, 63)
@@ -221,16 +224,16 @@ Partial Class Main_Menu
         Me.main_logout.Size = New System.Drawing.Size(60, 50)
         Me.main_logout.TabIndex = 1
         '
-        'Label1
+        'change_name
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Lucida Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(43, 10)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(175, 37)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Processor"
+        Me.change_name.AutoSize = True
+        Me.change_name.Font = New System.Drawing.Font("Lucida Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.change_name.ForeColor = System.Drawing.Color.White
+        Me.change_name.Location = New System.Drawing.Point(43, 10)
+        Me.change_name.Name = "change_name"
+        Me.change_name.Size = New System.Drawing.Size(175, 37)
+        Me.change_name.TabIndex = 0
+        Me.change_name.Text = "Processor"
         '
         'DataGridView1
         '
@@ -267,6 +270,7 @@ Partial Class Main_Menu
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel2)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Panel8)
         Me.FlowLayoutPanel1.Controls.Add(Me.DataGridView2)
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(818, 81)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
@@ -345,15 +349,34 @@ Partial Class Main_Menu
         Me.Panel4.Size = New System.Drawing.Size(435, 13)
         Me.Panel4.TabIndex = 0
         '
+        'Panel8
+        '
+        Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel8.Controls.Add(Me.Label6)
+        Me.Panel8.Location = New System.Drawing.Point(3, 224)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(438, 33)
+        Me.Panel8.TabIndex = 5
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(22, 7)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(123, 18)
+        Me.Label6.TabIndex = 0
+        Me.Label6.Text = "Customer Items"
+        '
         'DataGridView2
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
-        Me.DataGridView2.Location = New System.Drawing.Point(3, 224)
+        Me.DataGridView2.Location = New System.Drawing.Point(3, 263)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
-        Me.DataGridView2.Size = New System.Drawing.Size(441, 256)
-        Me.DataGridView2.TabIndex = 4
+        Me.DataGridView2.Size = New System.Drawing.Size(441, 231)
+        Me.DataGridView2.TabIndex = 6
         '
         'DataGridViewTextBoxColumn1
         '
@@ -414,6 +437,21 @@ Partial Class Main_Menu
         Me.Panel5.Size = New System.Drawing.Size(513, 114)
         Me.Panel5.TabIndex = 6
         '
+        'payment
+        '
+        Me.payment.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
+        Me.payment.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.payment.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
+        Me.payment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.payment.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.payment.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.payment.Location = New System.Drawing.Point(12, 61)
+        Me.payment.Name = "payment"
+        Me.payment.Size = New System.Drawing.Size(179, 45)
+        Me.payment.TabIndex = 6
+        Me.payment.Text = "Payment"
+        Me.payment.UseVisualStyleBackColor = False
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -471,21 +509,6 @@ Partial Class Main_Menu
         Me.Panel9.Size = New System.Drawing.Size(43, 36)
         Me.Panel9.TabIndex = 7
         '
-        'payment
-        '
-        Me.payment.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
-        Me.payment.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.payment.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(15, Byte), Integer))
-        Me.payment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.payment.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.payment.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.payment.Location = New System.Drawing.Point(12, 61)
-        Me.payment.Name = "payment"
-        Me.payment.Size = New System.Drawing.Size(179, 45)
-        Me.payment.TabIndex = 6
-        Me.payment.Text = "Payment"
-        Me.payment.UseVisualStyleBackColor = False
-        '
         'Main_Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -500,7 +523,7 @@ Partial Class Main_Menu
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1308, 616)
         Me.MinimizeBox = False
@@ -516,6 +539,8 @@ Partial Class Main_Menu
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
@@ -525,13 +550,13 @@ Partial Class Main_Menu
     End Sub
     Friend WithEvents Panel3 As Panel
     Friend WithEvents user_info As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents for_processor As Button
+    Friend WithEvents for_gpu As Button
+    Friend WithEvents for_ram As Button
+    Friend WithEvents for_motherboard As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Label1 As Label
+    Friend WithEvents change_name As Label
     Friend WithEvents prodname As DataGridViewTextBoxColumn
     Friend WithEvents qty As DataGridViewTextBoxColumn
     Friend WithEvents price As DataGridViewTextBoxColumn
@@ -542,10 +567,6 @@ Partial Class Main_Menu
     Friend WithEvents Button5 As Button
     Friend WithEvents display_name As Label
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents purchase As Button
     Friend WithEvents search As TextBox
     Friend WithEvents Button8 As Button
@@ -563,4 +584,10 @@ Partial Class Main_Menu
     Friend WithEvents Label5 As Label
     Friend WithEvents tooltip As ToolTip
     Friend WithEvents payment As Button
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
 End Class

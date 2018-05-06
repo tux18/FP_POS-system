@@ -30,16 +30,16 @@ Partial Class registration
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.male = New System.Windows.Forms.RadioButton()
-        Me.female = New System.Windows.Forms.RadioButton()
-        Me.birthdate = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.birthdate = New System.Windows.Forms.DateTimePicker()
+        Me.female = New System.Windows.Forms.RadioButton()
+        Me.male = New System.Windows.Forms.RadioButton()
         Me.fname = New System.Windows.Forms.TextBox()
         Me.contact_num = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -119,16 +119,21 @@ Partial Class registration
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Information"
         '
-        'male
+        'Label5
         '
-        Me.male.AutoSize = True
-        Me.male.Location = New System.Drawing.Point(34, 19)
-        Me.male.Name = "male"
-        Me.male.Size = New System.Drawing.Size(48, 17)
-        Me.male.TabIndex = 0
-        Me.male.TabStop = True
-        Me.male.Text = "Male"
-        Me.male.UseVisualStyleBackColor = True
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(152, 22)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(70, 13)
+        Me.Label5.TabIndex = 8
+        Me.Label5.Text = "Your Birthday"
+        '
+        'birthdate
+        '
+        Me.birthdate.Location = New System.Drawing.Point(155, 42)
+        Me.birthdate.Name = "birthdate"
+        Me.birthdate.Size = New System.Drawing.Size(200, 20)
+        Me.birthdate.TabIndex = 2
         '
         'female
         '
@@ -141,21 +146,16 @@ Partial Class registration
         Me.female.Text = "Female"
         Me.female.UseVisualStyleBackColor = True
         '
-        'birthdate
+        'male
         '
-        Me.birthdate.Location = New System.Drawing.Point(155, 42)
-        Me.birthdate.Name = "birthdate"
-        Me.birthdate.Size = New System.Drawing.Size(200, 20)
-        Me.birthdate.TabIndex = 2
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(152, 22)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(70, 13)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Your Birthday"
+        Me.male.AutoSize = True
+        Me.male.Location = New System.Drawing.Point(34, 19)
+        Me.male.Name = "male"
+        Me.male.Size = New System.Drawing.Size(48, 17)
+        Me.male.TabIndex = 0
+        Me.male.TabStop = True
+        Me.male.Text = "Male"
+        Me.male.UseVisualStyleBackColor = True
         '
         'fname
         '
@@ -190,21 +190,6 @@ Partial Class registration
         Me.Panel2.Size = New System.Drawing.Size(513, 113)
         Me.Panel2.TabIndex = 2
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(133, 14)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(221, 47)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Register"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.White
@@ -219,6 +204,21 @@ Partial Class registration
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "CANCEL"
         Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(133, 14)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(221, 47)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Register"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'registration
         '

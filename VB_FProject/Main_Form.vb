@@ -26,7 +26,10 @@
     End Sub
 
     Private Sub admin_Click(sender As Object, e As EventArgs) Handles admin.Click
+        Me.Hide()
+
         Dim admin_form = New Admin_Form()
         admin_form.Show()
+
     End Sub
 End Class

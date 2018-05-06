@@ -12,7 +12,7 @@
 
         'Application title
         If My.Application.Info.Title <> "" Then
-            ApplicationTitle.Text = My.Application.Info.Title
+            ApplicationTitle.Text = "PC POS System"
         Else
             'If the application title is missing, use the application name, without the extension
             ApplicationTitle.Text = System.IO.Path.GetFileNameWithoutExtension(My.Application.Info.AssemblyName)
@@ -31,5 +31,6 @@
         'Copyright info
         Copyright.Text = My.Application.Info.Copyright
     End Sub
+
 
 End Class

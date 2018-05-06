@@ -15,4 +15,21 @@
         Dim main = New Main_Form()
         main.Show()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles for_processor.Click
+        change_name.Text = "Processor"
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles for_motherboard.Click
+        change_name.Text = "Motherboard"
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles for_ram.Click
+        change_name.Text = "RAM"
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles for_gpu.Click
+        change_name.Text = "Graphics Card"
+    End Sub
 End Class
