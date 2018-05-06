@@ -32,6 +32,7 @@ Partial Class Admin_Form
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -51,7 +52,7 @@ Partial Class Admin_Form
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Lucida Sans", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(77, 18)
+        Me.Label1.Location = New System.Drawing.Point(42, 15)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(258, 32)
         Me.Label1.TabIndex = 0
@@ -63,9 +64,9 @@ Partial Class Admin_Form
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.password)
         Me.Panel1.Controls.Add(Me.username)
-        Me.Panel1.Location = New System.Drawing.Point(53, 79)
+        Me.Panel1.Location = New System.Drawing.Point(49, 83)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(252, 181)
+        Me.Panel1.Size = New System.Drawing.Size(258, 191)
         Me.Panel1.TabIndex = 5
         '
         'Label3
@@ -122,7 +123,7 @@ Partial Class Admin_Form
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button2.Location = New System.Drawing.Point(66, 69)
+        Me.Button2.Location = New System.Drawing.Point(97, 74)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(221, 28)
         Me.Button2.TabIndex = 5
@@ -137,7 +138,7 @@ Partial Class Admin_Form
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(66, 7)
+        Me.Button1.Location = New System.Drawing.Point(97, 12)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(221, 47)
         Me.Button1.TabIndex = 4
@@ -149,17 +150,28 @@ Partial Class Admin_Form
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Controls.Add(Me.Button2)
-        Me.Panel3.Location = New System.Drawing.Point(-4, 280)
+        Me.Panel3.Location = New System.Drawing.Point(-30, 291)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(374, 109)
+        Me.Panel3.Size = New System.Drawing.Size(448, 109)
         Me.Panel3.TabIndex = 6
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label4.Location = New System.Drawing.Point(31, 412)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(307, 13)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "**NOTE: Only the Administrator can Access Here in this Section"
         '
         'Admin_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(362, 401)
+        Me.ClientSize = New System.Drawing.Size(362, 441)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -173,6 +185,7 @@ Partial Class Admin_Form
         Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -186,4 +199,5 @@ Partial Class Admin_Form
     Friend WithEvents password As TextBox
     Friend WithEvents username As TextBox
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label4 As Label
 End Class

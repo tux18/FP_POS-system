@@ -32,4 +32,9 @@
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles for_gpu.Click
         change_name.Text = "Graphics Card"
     End Sub
+
+    Private Sub payment_Click(sender As Object, e As EventArgs) Handles payment.Click
+        Dim purchased = New Purchased_Items()
+        purchased.Show()
+    End Sub
 End Class

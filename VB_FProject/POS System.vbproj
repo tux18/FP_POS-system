@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator_Main.Designer.vb">
+      <DependentUpon>Administrator_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin_Form.Designer.vb">
       <DependentUpon>Admin_Form.vb</DependentUpon>
     </Compile>
@@ -112,6 +118,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Purchased_Items.Designer.vb">
+      <DependentUpon>Purchased_Items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Purchased_Items.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Registration.Designer.vb">
       <DependentUpon>Registration.vb</DependentUpon>
     </Compile>
@@ -126,6 +138,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Administrator_Main.resx">
+      <DependentUpon>Administrator_Main.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Form.resx">
       <DependentUpon>Admin_Form.vb</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +158,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchased_Items.resx">
+      <DependentUpon>Purchased_Items.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="registration.resx">
       <DependentUpon>Registration.vb</DependentUpon>

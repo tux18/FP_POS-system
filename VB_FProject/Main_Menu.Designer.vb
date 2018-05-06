@@ -24,8 +24,8 @@ Partial Class Main_Menu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main_Menu))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.for_gpu = New System.Windows.Forms.Button()
         Me.for_ram = New System.Windows.Forms.Button()
@@ -39,7 +39,7 @@ Partial Class Main_Menu
         Me.info = New System.Windows.Forms.Panel()
         Me.main_logout = New System.Windows.Forms.Panel()
         Me.change_name = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.system_items = New System.Windows.Forms.DataGridView()
         Me.prodname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.price = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,7 +53,7 @@ Partial Class Main_Menu
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.customer_items = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -71,11 +71,11 @@ Partial Class Main_Menu
         Me.Panel1.SuspendLayout()
         Me.user_info.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.system_items, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel8.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.customer_items, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -167,7 +167,7 @@ Partial Class Main_Menu
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label3.Location = New System.Drawing.Point(101, 144)
+        Me.Label3.Location = New System.Drawing.Point(112, 144)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(79, 15)
         Me.Label3.TabIndex = 8
@@ -178,7 +178,7 @@ Partial Class Main_Menu
         Me.aa.AutoSize = True
         Me.aa.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.aa.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.aa.Location = New System.Drawing.Point(30, 144)
+        Me.aa.Location = New System.Drawing.Point(44, 144)
         Me.aa.Name = "aa"
         Me.aa.Size = New System.Drawing.Size(75, 15)
         Me.aa.TabIndex = 7
@@ -188,9 +188,9 @@ Partial Class Main_Menu
         '
         Me.Panel7.BackgroundImage = CType(resources.GetObject("Panel7.BackgroundImage"), System.Drawing.Image)
         Me.Panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Panel7.Location = New System.Drawing.Point(33, 3)
+        Me.Panel7.Location = New System.Drawing.Point(48, 3)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(171, 138)
+        Me.Panel7.Size = New System.Drawing.Size(156, 138)
         Me.Panel7.TabIndex = 7
         '
         'Panel3
@@ -199,9 +199,9 @@ Partial Class Main_Menu
         Me.Panel3.Controls.Add(Me.info)
         Me.Panel3.Controls.Add(Me.main_logout)
         Me.Panel3.Controls.Add(Me.change_name)
-        Me.Panel3.Location = New System.Drawing.Point(256, 12)
+        Me.Panel3.Location = New System.Drawing.Point(256, -3)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1044, 63)
+        Me.Panel3.Size = New System.Drawing.Size(1044, 78)
         Me.Panel3.TabIndex = 1
         '
         'info
@@ -209,7 +209,7 @@ Partial Class Main_Menu
         Me.info.BackgroundImage = CType(resources.GetObject("info.BackgroundImage"), System.Drawing.Image)
         Me.info.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.info.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.info.Location = New System.Drawing.Point(858, 10)
+        Me.info.Location = New System.Drawing.Point(880, 15)
         Me.info.Name = "info"
         Me.info.Size = New System.Drawing.Size(60, 50)
         Me.info.TabIndex = 2
@@ -219,7 +219,7 @@ Partial Class Main_Menu
         Me.main_logout.BackgroundImage = CType(resources.GetObject("main_logout.BackgroundImage"), System.Drawing.Image)
         Me.main_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.main_logout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.main_logout.Location = New System.Drawing.Point(924, 10)
+        Me.main_logout.Location = New System.Drawing.Point(946, 15)
         Me.main_logout.Name = "main_logout"
         Me.main_logout.Size = New System.Drawing.Size(60, 50)
         Me.main_logout.TabIndex = 1
@@ -229,27 +229,30 @@ Partial Class Main_Menu
         Me.change_name.AutoSize = True
         Me.change_name.Font = New System.Drawing.Font("Lucida Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.change_name.ForeColor = System.Drawing.Color.White
-        Me.change_name.Location = New System.Drawing.Point(43, 10)
+        Me.change_name.Location = New System.Drawing.Point(32, 23)
         Me.change_name.Name = "change_name"
         Me.change_name.Size = New System.Drawing.Size(175, 37)
         Me.change_name.TabIndex = 0
         Me.change_name.Text = "Processor"
         '
-        'DataGridView1
+        'system_items
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prodname, Me.qty, Me.price, Me.status})
-        Me.DataGridView1.Location = New System.Drawing.Point(272, 144)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(513, 301)
-        Me.DataGridView1.TabIndex = 2
+        Me.system_items.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.system_items.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prodname, Me.qty, Me.price, Me.status})
+        Me.system_items.Location = New System.Drawing.Point(272, 144)
+        Me.system_items.Name = "system_items"
+        Me.system_items.ReadOnly = True
+        Me.system_items.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.system_items.Size = New System.Drawing.Size(513, 301)
+        Me.system_items.TabIndex = 2
         '
         'prodname
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.prodname.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.prodname.DefaultCellStyle = DataGridViewCellStyle13
         Me.prodname.HeaderText = "Product Name"
         Me.prodname.Name = "prodname"
+        Me.prodname.ReadOnly = True
         Me.prodname.Width = 170
         '
         'qty
@@ -271,7 +274,7 @@ Partial Class Main_Menu
         '
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel2)
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel8)
-        Me.FlowLayoutPanel1.Controls.Add(Me.DataGridView2)
+        Me.FlowLayoutPanel1.Controls.Add(Me.customer_items)
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(818, 81)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(444, 483)
@@ -300,6 +303,7 @@ Partial Class Main_Menu
         Me.Button8.Size = New System.Drawing.Size(121, 64)
         Me.Button8.TabIndex = 4
         Me.Button8.Text = "Remove"
+        Me.tooltip.SetToolTip(Me.Button8, "Select and Remove the Selected Items in the Customer Items")
         Me.Button8.UseVisualStyleBackColor = False
         '
         'Button6
@@ -313,6 +317,7 @@ Partial Class Main_Menu
         Me.Button6.Size = New System.Drawing.Size(143, 64)
         Me.Button6.TabIndex = 3
         Me.Button6.Text = "Customer"
+        Me.tooltip.SetToolTip(Me.Button6, "Name of the Customer")
         Me.Button6.UseVisualStyleBackColor = False
         '
         'Button5
@@ -329,6 +334,7 @@ Partial Class Main_Menu
         Me.Button5.TabIndex = 2
         Me.Button5.Text = "Clear"
         Me.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.tooltip.SetToolTip(Me.Button5, "Clear the List of the Customer Items")
         Me.Button5.UseVisualStyleBackColor = False
         '
         'display_name
@@ -368,20 +374,21 @@ Partial Class Main_Menu
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Customer Items"
         '
-        'DataGridView2
+        'customer_items
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
-        Me.DataGridView2.Location = New System.Drawing.Point(3, 263)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.ReadOnly = True
-        Me.DataGridView2.Size = New System.Drawing.Size(441, 231)
-        Me.DataGridView2.TabIndex = 6
+        Me.customer_items.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.customer_items.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
+        Me.customer_items.Location = New System.Drawing.Point(3, 263)
+        Me.customer_items.Name = "customer_items"
+        Me.customer_items.ReadOnly = True
+        Me.customer_items.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.customer_items.Size = New System.Drawing.Size(441, 231)
+        Me.customer_items.TabIndex = 6
         '
         'DataGridViewTextBoxColumn1
         '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle14
         Me.DataGridViewTextBoxColumn1.HeaderText = "Product Name"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
@@ -404,6 +411,7 @@ Partial Class Main_Menu
         'purchase
         '
         Me.purchase.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.purchase.Cursor = System.Windows.Forms.Cursors.Hand
         Me.purchase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.purchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.purchase.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -413,6 +421,7 @@ Partial Class Main_Menu
         Me.purchase.Size = New System.Drawing.Size(202, 40)
         Me.purchase.TabIndex = 4
         Me.purchase.Text = "Purchase Item"
+        Me.tooltip.SetToolTip(Me.purchase, "Select and Click this to purchase the selected item in the table below")
         Me.purchase.UseVisualStyleBackColor = False
         '
         'search
@@ -517,7 +526,7 @@ Partial Class Main_Menu
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel9)
         Me.Controls.Add(Me.Panel5)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.system_items)
         Me.Controls.Add(Me.search)
         Me.Controls.Add(Me.purchase)
         Me.Controls.Add(Me.FlowLayoutPanel1)
@@ -535,13 +544,13 @@ Partial Class Main_Menu
         Me.user_info.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.system_items, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.customer_items, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.ResumeLayout(False)
@@ -555,7 +564,7 @@ Partial Class Main_Menu
     Friend WithEvents for_ram As Button
     Friend WithEvents for_motherboard As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents system_items As DataGridView
     Friend WithEvents change_name As Label
     Friend WithEvents prodname As DataGridViewTextBoxColumn
     Friend WithEvents qty As DataGridViewTextBoxColumn
@@ -586,7 +595,7 @@ Partial Class Main_Menu
     Friend WithEvents payment As Button
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Label6 As Label
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents customer_items As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
