@@ -24,8 +24,8 @@ Partial Class Main_Menu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main_Menu))
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.for_gpu = New System.Windows.Forms.Button()
         Me.for_ram = New System.Windows.Forms.Button()
@@ -227,11 +227,11 @@ Partial Class Main_Menu
         'change_name
         '
         Me.change_name.AutoSize = True
-        Me.change_name.Font = New System.Drawing.Font("Lucida Sans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.change_name.Font = New System.Drawing.Font("Agency FB", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.change_name.ForeColor = System.Drawing.Color.White
-        Me.change_name.Location = New System.Drawing.Point(32, 23)
+        Me.change_name.Location = New System.Drawing.Point(26, 0)
         Me.change_name.Name = "change_name"
-        Me.change_name.Size = New System.Drawing.Size(175, 37)
+        Me.change_name.Size = New System.Drawing.Size(275, 77)
         Me.change_name.TabIndex = 0
         Me.change_name.Text = "Processor"
         '
@@ -248,8 +248,8 @@ Partial Class Main_Menu
         '
         'prodname
         '
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.prodname.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.prodname.DefaultCellStyle = DataGridViewCellStyle17
         Me.prodname.HeaderText = "Product Name"
         Me.prodname.Name = "prodname"
         Me.prodname.ReadOnly = True
@@ -387,8 +387,8 @@ Partial Class Main_Menu
         '
         'DataGridViewTextBoxColumn1
         '
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle18
         Me.DataGridViewTextBoxColumn1.HeaderText = "Product Name"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
@@ -538,7 +538,7 @@ Partial Class Main_Menu
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(1308, 616)
         Me.Name = "Main_Menu"
-        Me.Text = "Main_Menu"
+        Me.Text = "Main Interface"
         Me.Panel1.ResumeLayout(False)
         Me.user_info.ResumeLayout(False)
         Me.user_info.PerformLayout()

@@ -60,6 +60,7 @@ Partial Class Admin_Form
         '
         'Panel1
         '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.password)
@@ -159,18 +160,18 @@ Partial Class Admin_Form
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label4.Location = New System.Drawing.Point(31, 412)
+        Me.Label4.Location = New System.Drawing.Point(60, 403)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(307, 13)
+        Me.Label4.Size = New System.Drawing.Size(241, 13)
         Me.Label4.TabIndex = 7
-        Me.Label4.Text = "**NOTE: Only the Administrator can Access Here in this Section"
+        Me.Label4.Text = "**NOTE: Only the Administrator can Access Here "
         '
         'Admin_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(362, 441)
+        Me.ClientSize = New System.Drawing.Size(362, 421)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)

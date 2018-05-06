@@ -43,7 +43,7 @@ Partial Class Purchased_Items
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.Panel2.Location = New System.Drawing.Point(0, -5)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(474, 43)
@@ -90,7 +90,7 @@ Partial Class Purchased_Items
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.Panel3.Location = New System.Drawing.Point(0, 384)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(474, 49)
@@ -190,6 +190,7 @@ Partial Class Purchased_Items
         '
         'Button1
         '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Location = New System.Drawing.Point(80, 272)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(142, 35)
@@ -199,6 +200,7 @@ Partial Class Purchased_Items
         '
         'Button2
         '
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.Location = New System.Drawing.Point(211, 46)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(92, 29)
