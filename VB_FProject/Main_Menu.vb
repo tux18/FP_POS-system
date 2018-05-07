@@ -1,4 +1,27 @@
-﻿Public Class Main_Menu
+﻿Imports MySql.Data.MySqlClient
+
+Public Class Main_Menu
+
+    Dim make_connection As String = "datasource=localhost; port=3306; username=root; password=; database=pos_database"
+    Dim conn As New MySqlConnection(make_connection)
+    Dim cmd As New MySqlCommand
+    Dim dt As New DataTable()
+
+    Private Sub Populate(name As String, qty As String, price As String, status As String)
+        Dim row As String() = New String() {name, qty, price, status}
+        system_items.Rows.Add(row)
+
+    End Sub
+
+
+    Private Sub DeleteRow(name As String, qty As String, price As String, status As String)
+        Dim row As String() = New String() {name, qty, price, status}
+        system_items.Rows.Clear()
+
+    End Sub
+
+
+
 
     Private Sub Main_Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
@@ -19,7 +42,36 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles for_processor.Click
+
+        ' The Code Below will fix the adding or displaying in the table
+        ' where the problem is continous adding of value in the DataGridView
+
+        system_items.Rows.Clear() ' The DataGridView will Clear all the Remaining Data
+        dt.Rows.Clear() ' Data Table that holds the value from Data Source will be cleared
+
+
+
+
         change_name.Text = "Processor"
+
+        Dim query As String = "select * from processor_items"
+
+        Dim ds As New DataSet()
+        cmd = New MySqlCommand(query, conn)
+        'adt.Fill(ds, "processor_items")
+
+        Dim adt = New MySqlDataAdapter(cmd)
+        adt.Fill(dt)
+
+        For Each row In dt.Rows
+            Populate(row(0), row(1), row(2), row(3))
+        Next
+        'system_items.DataSource = ds.Tables(0)
+
+        conn.Close()
+
+
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles for_motherboard.Click
@@ -37,12 +89,12 @@
 
     Private Sub payment_Click(sender As Object, e As EventArgs) Handles payment.Click
         Dim purchased = New Purchased_Items()
-        purchased.Show()
+        purchased.ShowDialog()
     End Sub
 
     Private Sub Customer_btn_Click(sender As Object, e As EventArgs) Handles Customer_btn.Click
         ' Testing
         Dim customer = New Customer_Info()
-        customer.Show()
+        customer.ShowDialog()
     End Sub
 End Class
