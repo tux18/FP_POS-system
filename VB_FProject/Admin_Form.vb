@@ -21,7 +21,9 @@
     End Sub
 
     Private Sub Admin_Form_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Application.Exit()
+        Me.Dispose()
+        Dim back_to_main_form = New Main_Form()
+        back_to_main_form.Show()
     End Sub
 
 End Class

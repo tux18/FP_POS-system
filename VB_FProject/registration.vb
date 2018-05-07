@@ -14,4 +14,11 @@
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
+
+    Private Sub registration_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Me.Dispose()
+
+        Dim back_to_main_form = New Main_Form()
+        back_to_main_form.Show()
+    End Sub
 End Class

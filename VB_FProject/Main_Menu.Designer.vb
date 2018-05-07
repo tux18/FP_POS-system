@@ -24,8 +24,8 @@ Partial Class Main_Menu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main_Menu))
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.for_gpu = New System.Windows.Forms.Button()
         Me.for_ram = New System.Windows.Forms.Button()
@@ -46,8 +46,9 @@ Partial Class Main_Menu
         Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.display_contact = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Customer_btn = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.display_name = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -248,8 +249,8 @@ Partial Class Main_Menu
         '
         'prodname
         '
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.prodname.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.prodname.DefaultCellStyle = DataGridViewCellStyle1
         Me.prodname.HeaderText = "Product Name"
         Me.prodname.Name = "prodname"
         Me.prodname.ReadOnly = True
@@ -259,16 +260,19 @@ Partial Class Main_Menu
         '
         Me.qty.HeaderText = "Quantity"
         Me.qty.Name = "qty"
+        Me.qty.ReadOnly = True
         '
         'price
         '
         Me.price.HeaderText = "Price/Qty"
         Me.price.Name = "price"
+        Me.price.ReadOnly = True
         '
         'status
         '
         Me.status.HeaderText = "Status"
         Me.status.Name = "status"
+        Me.status.ReadOnly = True
         '
         'FlowLayoutPanel1
         '
@@ -282,8 +286,9 @@ Partial Class Main_Menu
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.display_contact)
         Me.Panel2.Controls.Add(Me.Button8)
-        Me.Panel2.Controls.Add(Me.Button6)
+        Me.Panel2.Controls.Add(Me.Customer_btn)
         Me.Panel2.Controls.Add(Me.Button5)
         Me.Panel2.Controls.Add(Me.display_name)
         Me.Panel2.Controls.Add(Me.Panel4)
@@ -291,6 +296,16 @@ Partial Class Main_Menu
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(441, 215)
         Me.Panel2.TabIndex = 0
+        '
+        'display_contact
+        '
+        Me.display_contact.AutoSize = True
+        Me.display_contact.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.display_contact.Location = New System.Drawing.Point(156, 72)
+        Me.display_contact.Name = "display_contact"
+        Me.display_contact.Size = New System.Drawing.Size(130, 18)
+        Me.display_contact.TabIndex = 5
+        Me.display_contact.Text = "Contact Number"
         '
         'Button8
         '
@@ -306,19 +321,19 @@ Partial Class Main_Menu
         Me.tooltip.SetToolTip(Me.Button8, "Select and Remove the Selected Items in the Customer Items")
         Me.Button8.UseVisualStyleBackColor = False
         '
-        'Button6
+        'Customer_btn
         '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
-        Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button6.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button6.Location = New System.Drawing.Point(149, 133)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(143, 64)
-        Me.Button6.TabIndex = 3
-        Me.Button6.Text = "Customer"
-        Me.tooltip.SetToolTip(Me.Button6, "Name of the Customer")
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.Customer_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.Customer_btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Customer_btn.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Customer_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Customer_btn.Location = New System.Drawing.Point(149, 133)
+        Me.Customer_btn.Name = "Customer_btn"
+        Me.Customer_btn.Size = New System.Drawing.Size(143, 64)
+        Me.Customer_btn.TabIndex = 3
+        Me.Customer_btn.Text = "Customer"
+        Me.tooltip.SetToolTip(Me.Customer_btn, "Name of the Customer")
+        Me.Customer_btn.UseVisualStyleBackColor = False
         '
         'Button5
         '
@@ -387,8 +402,8 @@ Partial Class Main_Menu
         '
         'DataGridViewTextBoxColumn1
         '
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewTextBoxColumn1.HeaderText = "Product Name"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
@@ -572,7 +587,7 @@ Partial Class Main_Menu
     Friend WithEvents status As DataGridViewTextBoxColumn
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button6 As Button
+    Friend WithEvents Customer_btn As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents display_name As Label
     Friend WithEvents Panel4 As Panel
@@ -599,4 +614,5 @@ Partial Class Main_Menu
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents display_contact As Label
 End Class

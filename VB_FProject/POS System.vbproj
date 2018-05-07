@@ -84,6 +84,12 @@
     <Compile Include="Admin_Form.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Customer_Info.Designer.vb">
+      <DependentUpon>Customer_Info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Info.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login_Interface.Designer.vb">
       <DependentUpon>Login_Interface.vb</DependentUpon>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Form.resx">
       <DependentUpon>Admin_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Info.resx">
+      <DependentUpon>Customer_Info.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Interface.resx">
       <DependentUpon>Login_Interface.vb</DependentUpon>

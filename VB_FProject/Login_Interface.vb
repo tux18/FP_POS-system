@@ -21,7 +21,10 @@ Public Class Login_Interface
     End Sub
 
     Private Sub Login_Interface_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Application.Exit()
+        Me.Dispose()
+        Dim back_to_main_form = New Main_Form()
+        back_to_main_form.Show()
+
     End Sub
 
     Private Sub register_Click(sender As Object, e As EventArgs) Handles register.Click

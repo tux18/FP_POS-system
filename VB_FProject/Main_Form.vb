@@ -6,6 +6,7 @@
         Dim cust = New Login_Interface()
         cust.Show()
         Me.Hide()
+
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -22,7 +23,10 @@
 
     Private Sub Main_Form_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         ' This Code below will fully exit the FORM while clicking the X button in the Title bar
-        System.Windows.Forms.Application.Exit()
+
+        System.Diagnostics.Process.GetCurrentProcess().Kill() ' this code will terminate the threads in the background  In order to avoid StackOverflow
+
+        Application.Exit()
     End Sub
 
     Private Sub admin_Click(sender As Object, e As EventArgs) Handles admin.Click
