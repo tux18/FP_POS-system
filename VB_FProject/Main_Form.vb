@@ -25,7 +25,7 @@
         ' This Code below will fully exit the FORM while clicking the X button in the Title bar
 
         System.Diagnostics.Process.GetCurrentProcess().Kill() ' this code will terminate the threads in the background  In order to avoid StackOverflow
-
+        ' This will Close completely the program
         Application.Exit()
     End Sub
 
