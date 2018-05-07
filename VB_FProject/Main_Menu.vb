@@ -1,4 +1,5 @@
 ﻿Public Class Main_Menu
+
     Private Sub Main_Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
         tooltip.SetToolTip(main_logout, "Log Out")
@@ -11,8 +12,9 @@
     End Sub
 
     Private Sub main_logout_MouseClick(sender As Object, e As MouseEventArgs) Handles main_logout.MouseClick
-        Me.Dispose()
+        Me.Hide()
         Dim main = New Main_Form()
+
         main.Show()
     End Sub
 
@@ -36,5 +38,10 @@
     Private Sub payment_Click(sender As Object, e As EventArgs) Handles payment.Click
         Dim purchased = New Purchased_Items()
         purchased.Show()
+    End Sub
+
+    Private Sub Customer_btn_Click(sender As Object, e As EventArgs) Handles Customer_btn.Click
+        Dim customer = New Customer_Info()
+        customer.Show()
     End Sub
 End Class
