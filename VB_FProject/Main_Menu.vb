@@ -41,6 +41,7 @@
     End Sub
 
     Private Sub Customer_btn_Click(sender As Object, e As EventArgs) Handles Customer_btn.Click
+        ' Testing
         Dim customer = New Customer_Info()
         customer.Show()
     End Sub
