@@ -109,6 +109,7 @@ Partial Class Main_Form
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(862, 424)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Main_Form"
         Me.Text = "Main"
         Me.Panel1.ResumeLayout(False)

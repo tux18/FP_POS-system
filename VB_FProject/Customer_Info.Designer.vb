@@ -26,7 +26,7 @@ Partial Class Customer_Info
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.clear_btn_cust = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.accept_input = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -58,7 +58,7 @@ Partial Class Customer_Info
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.Button2)
+        Me.Panel3.Controls.Add(Me.clear_btn_cust)
         Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Controls.Add(Me.accept_input)
         Me.Panel3.Controls.Add(Me.Label2)
@@ -70,20 +70,20 @@ Partial Class Customer_Info
         Me.Panel3.Size = New System.Drawing.Size(345, 277)
         Me.Panel3.TabIndex = 1
         '
-        'Button2
+        'clear_btn_cust
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(191, 116)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(135, 31)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Clear Name"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.clear_btn_cust.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.clear_btn_cust.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.clear_btn_cust.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.clear_btn_cust.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.clear_btn_cust.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clear_btn_cust.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.clear_btn_cust.Location = New System.Drawing.Point(191, 116)
+        Me.clear_btn_cust.Name = "clear_btn_cust"
+        Me.clear_btn_cust.Size = New System.Drawing.Size(135, 31)
+        Me.clear_btn_cust.TabIndex = 6
+        Me.clear_btn_cust.Text = "Clear Name"
+        Me.clear_btn_cust.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -176,6 +176,6 @@ Partial Class Customer_Info
     Friend WithEvents Label2 As Label
     Friend WithEvents contact_num As TextBox
     Friend WithEvents accept_input As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents clear_btn_cust As Button
     Friend WithEvents Button1 As Button
 End Class

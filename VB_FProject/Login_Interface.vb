@@ -6,6 +6,11 @@ Public Class Login_Interface
 
     Private Sub Customer_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
+
+        ' The Code will provide a Focus() Like
+        Me.Show()
+        user_name.Select()
+
     End Sub
 
     Private Sub Cust_Cancel_Click(sender As Object, e As EventArgs) Handles login_cancel.Click
@@ -32,4 +37,6 @@ Public Class Login_Interface
         Dim reg = New registration()
         reg.Show()
     End Sub
+
+
 End Class

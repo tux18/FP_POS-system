@@ -307,6 +307,7 @@ Partial Class Main_Menu
         Me.display_contact.Size = New System.Drawing.Size(130, 18)
         Me.display_contact.TabIndex = 5
         Me.display_contact.Text = "Contact Number"
+        Me.display_contact.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Button8
         '
@@ -357,11 +358,12 @@ Partial Class Main_Menu
         '
         Me.display_name.AutoSize = True
         Me.display_name.Font = New System.Drawing.Font("Lucida Sans", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.display_name.Location = New System.Drawing.Point(109, 37)
+        Me.display_name.Location = New System.Drawing.Point(108, 37)
         Me.display_name.Name = "display_name"
         Me.display_name.Size = New System.Drawing.Size(228, 32)
         Me.display_name.TabIndex = 1
         Me.display_name.Text = "Customer Name"
+        Me.display_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel4
         '

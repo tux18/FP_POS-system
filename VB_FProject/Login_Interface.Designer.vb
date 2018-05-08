@@ -27,7 +27,7 @@ Partial Class Login_Interface
         Me.user_icon = New System.Windows.Forms.Panel()
         Me.username = New System.Windows.Forms.TextBox()
         Me.pass_icon = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.user_name = New System.Windows.Forms.TextBox()
         Me.password = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -48,7 +48,7 @@ Partial Class Login_Interface
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.user_icon)
         Me.Panel1.Controls.Add(Me.pass_icon)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.user_name)
         Me.Panel1.Controls.Add(Me.password)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -84,13 +84,13 @@ Partial Class Login_Interface
         Me.pass_icon.Size = New System.Drawing.Size(29, 27)
         Me.pass_icon.TabIndex = 6
         '
-        'TextBox1
+        'user_name
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(106, 50)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(241, 26)
-        Me.TextBox1.TabIndex = 1
+        Me.user_name.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.user_name.Location = New System.Drawing.Point(106, 50)
+        Me.user_name.Name = "user_name"
+        Me.user_name.Size = New System.Drawing.Size(241, 26)
+        Me.user_name.TabIndex = 1
         '
         'password
         '
@@ -236,5 +236,5 @@ Partial Class Login_Interface
     Friend WithEvents pass_icon As Panel
     Friend WithEvents password As TextBox
     Friend WithEvents user_icon As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents user_name As TextBox
 End Class
