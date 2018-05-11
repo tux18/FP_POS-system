@@ -25,7 +25,6 @@ Partial Class Purchased_Items
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.dynamic_pay = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -38,6 +37,7 @@ Partial Class Purchased_Items
         Me.money_bill = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.purchase = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,8 +52,8 @@ Partial Class Purchased_Items
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.purchase)
         Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.dynamic_pay)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Panel4)
@@ -79,16 +79,6 @@ Partial Class Purchased_Items
         Me.Button2.TabIndex = 12
         Me.Button2.Text = "Clear"
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Location = New System.Drawing.Point(80, 272)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(142, 35)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Confirm"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'dynamic_pay
         '
@@ -208,6 +198,21 @@ Partial Class Purchased_Items
         Me.Panel3.Size = New System.Drawing.Size(474, 49)
         Me.Panel3.TabIndex = 1
         '
+        'purchase
+        '
+        Me.purchase.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.purchase.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.purchase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.purchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.purchase.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.purchase.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.purchase.Location = New System.Drawing.Point(48, 267)
+        Me.purchase.Name = "purchase"
+        Me.purchase.Size = New System.Drawing.Size(202, 40)
+        Me.purchase.TabIndex = 13
+        Me.purchase.Text = "Confirm"
+        Me.purchase.UseVisualStyleBackColor = False
+        '
         'Purchased_Items
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -239,5 +244,5 @@ Partial Class Purchased_Items
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents purchase As Button
 End Class

@@ -123,7 +123,18 @@ Public Class Main_Menu
 
     Private Sub Customer_btn_Click(sender As Object, e As EventArgs) Handles Customer_btn.Click
         ' Testing
-        Dim customer = New Customer_Info()
+        'Dim customer = New Customer_Info()
+        'customer.ShowDialog()
+
+        Dim customer = New Customer()
         customer.ShowDialog()
+
+
     End Sub
+
+    Private Sub purchase_Click(sender As Object, e As EventArgs) Handles purchase.Click
+
+    End Sub
+
+
 End Class

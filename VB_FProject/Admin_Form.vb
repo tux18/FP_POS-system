@@ -17,7 +17,9 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        Dim obj = New Administrator_Main()
+        obj.Show()
+        Me.Dispose()
     End Sub
 
     Private Sub Admin_Form_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

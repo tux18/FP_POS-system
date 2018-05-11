@@ -88,6 +88,12 @@
     <Compile Include="Admin_Form.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Customer.Designer.vb">
+      <DependentUpon>Customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Customer_Info.Designer.vb">
       <DependentUpon>Customer_Info.vb</DependentUpon>
     </Compile>
@@ -128,6 +134,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Selected_Items.Designer.vb">
+      <DependentUpon>Selected_Items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Selected_Items.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Purchased_Items.Designer.vb">
       <DependentUpon>Purchased_Items.vb</DependentUpon>
     </Compile>
@@ -154,6 +166,9 @@
     <EmbeddedResource Include="Admin_Form.resx">
       <DependentUpon>Admin_Form.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer_Info.resx">
       <DependentUpon>Customer_Info.vb</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="registration.resx">
       <DependentUpon>Registration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selected_Items.resx">
+      <DependentUpon>Selected_Items.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
