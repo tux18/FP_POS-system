@@ -24,8 +24,8 @@ Partial Class Main_Menu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main_Menu))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.for_gpu = New System.Windows.Forms.Button()
@@ -103,7 +103,7 @@ Partial Class Main_Menu
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(0, 469)
+        Me.Button1.Location = New System.Drawing.Point(0, 440)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(257, 49)
         Me.Button1.TabIndex = 5
@@ -118,7 +118,7 @@ Partial Class Main_Menu
         Me.for_gpu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.for_gpu.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.for_gpu.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.for_gpu.Location = New System.Drawing.Point(0, 414)
+        Me.for_gpu.Location = New System.Drawing.Point(0, 385)
         Me.for_gpu.Name = "for_gpu"
         Me.for_gpu.Size = New System.Drawing.Size(257, 49)
         Me.for_gpu.TabIndex = 3
@@ -133,7 +133,7 @@ Partial Class Main_Menu
         Me.for_ram.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.for_ram.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.for_ram.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.for_ram.Location = New System.Drawing.Point(0, 359)
+        Me.for_ram.Location = New System.Drawing.Point(0, 330)
         Me.for_ram.Name = "for_ram"
         Me.for_ram.Size = New System.Drawing.Size(257, 49)
         Me.for_ram.TabIndex = 4
@@ -148,7 +148,7 @@ Partial Class Main_Menu
         Me.for_motherboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.for_motherboard.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.for_motherboard.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.for_motherboard.Location = New System.Drawing.Point(0, 304)
+        Me.for_motherboard.Location = New System.Drawing.Point(0, 275)
         Me.for_motherboard.Name = "for_motherboard"
         Me.for_motherboard.Size = New System.Drawing.Size(257, 49)
         Me.for_motherboard.TabIndex = 3
@@ -163,7 +163,7 @@ Partial Class Main_Menu
         Me.for_processor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.for_processor.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.for_processor.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.for_processor.Location = New System.Drawing.Point(0, 249)
+        Me.for_processor.Location = New System.Drawing.Point(0, 220)
         Me.for_processor.Name = "for_processor"
         Me.for_processor.Size = New System.Drawing.Size(257, 49)
         Me.for_processor.TabIndex = 2
@@ -267,8 +267,8 @@ Partial Class Main_Menu
         '
         'prodname
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.prodname.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.prodname.DefaultCellStyle = DataGridViewCellStyle1
         Me.prodname.HeaderText = "Product Name"
         Me.prodname.Name = "prodname"
         Me.prodname.ReadOnly = True
@@ -423,8 +423,8 @@ Partial Class Main_Menu
         '
         'DataGridViewTextBoxColumn1
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewTextBoxColumn1.HeaderText = "Product Name"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
