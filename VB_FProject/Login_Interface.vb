@@ -1,9 +1,15 @@
-﻿
+﻿Imports MySql.Data.MySqlClient
+
 
 Public Class Login_Interface
     Dim main = New Main_Form()
+    Dim make_connection As String = "datasource=localhost; port=3306; username=root; password=; database=pos_database"
+    Dim conn As New MySqlConnection(make_connection)
+    Dim cmd As New MySqlCommand
+    Dim reader As MySqlDataReader
+    Dim mm = New Main_Menu()
 
-
+    Dim flag As Boolean = False
     Private Sub Customer_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
 
@@ -20,8 +26,49 @@ Public Class Login_Interface
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles login.Click
-        Dim mm = New Main_Menu()
-        mm.Show()
+        Dim getuser As String = user_name.Text
+        Dim getpass As String = password.Text
+
+        Dim test As String
+
+
+        conn.Open()
+        ' Retrieve the user and password in database 
+        Dim query As String = "SELECT username,password FROM accounts"
+        cmd = New MySqlCommand(query, conn)
+
+        reader = cmd.ExecuteReader
+
+        While reader.Read
+            If reader.GetString("username").Equals(getuser) And reader.GetString("password").Equals(getpass) Then
+                MessageBox.Show("Login Successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                mm.Show()
+                flag = False
+                Exit While
+            Else
+                flag = True
+
+            End If
+
+        End While
+
+        ' Close and Dispose the Connection
+
+        conn.Close()
+        conn.Dispose()
+
+
+        If flag.Equals(True) Then
+
+            MessageBox.Show("ERROR: Invalid Username or Password", "Authentication", MessageBoxButtons.OK, MessageBoxIcon.Error
+                                           )
+            Me.Dispose()
+            Dim obj As New Login_Interface
+            obj.Show()
+        Else
+
+
+        End If
         Me.Hide()
     End Sub
 
