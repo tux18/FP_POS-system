@@ -30,7 +30,7 @@ Public Class Main_Menu
 
     Private Sub main_logout_MouseClick(sender As Object, e As MouseEventArgs) Handles main_logout.MouseClick
         Me.Hide()
-        Dim main = New Main_Form()
+        Dim main = New Login_Interface()
 
         main.Show()
     End Sub
@@ -134,6 +134,11 @@ Public Class Main_Menu
 
     Private Sub purchase_Click(sender As Object, e As EventArgs) Handles purchase.Click
 
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim obj As New Crud()
+        obj.ShowDialog()
     End Sub
 
 

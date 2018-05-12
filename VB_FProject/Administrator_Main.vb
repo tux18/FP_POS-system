@@ -1,7 +1,8 @@
 ﻿Public Class Administrator_Main
     Private Sub Administrator_Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
-
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
     End Sub
 
     Private Sub Administrator_Main_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

@@ -7,7 +7,7 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Dispose()
-        Dim obj = New Main_Form()
+        Dim obj = New Login_Interface()
         obj.Show()
     End Sub
 

@@ -24,6 +24,7 @@ Partial Class Purchased_Items
     Private Sub InitializeComponent()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.purchase = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.dynamic_pay = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -37,7 +38,6 @@ Partial Class Purchased_Items
         Me.money_bill = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.purchase = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,6 +69,21 @@ Partial Class Purchased_Items
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(311, 312)
         Me.Panel1.TabIndex = 1
+        '
+        'purchase
+        '
+        Me.purchase.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.purchase.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.purchase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.purchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.purchase.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.purchase.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.purchase.Location = New System.Drawing.Point(48, 267)
+        Me.purchase.Name = "purchase"
+        Me.purchase.Size = New System.Drawing.Size(202, 40)
+        Me.purchase.TabIndex = 13
+        Me.purchase.Text = "Confirm"
+        Me.purchase.UseVisualStyleBackColor = False
         '
         'Button2
         '
@@ -105,9 +120,9 @@ Partial Class Purchased_Items
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Panel4.Location = New System.Drawing.Point(59, 178)
+        Me.Panel4.Location = New System.Drawing.Point(-1, 178)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(244, 10)
+        Me.Panel4.Size = New System.Drawing.Size(311, 10)
         Me.Panel4.TabIndex = 8
         '
         'Label6
@@ -197,21 +212,6 @@ Partial Class Purchased_Items
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(474, 49)
         Me.Panel3.TabIndex = 1
-        '
-        'purchase
-        '
-        Me.purchase.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.purchase.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.purchase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.purchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.purchase.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.purchase.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.purchase.Location = New System.Drawing.Point(48, 267)
-        Me.purchase.Name = "purchase"
-        Me.purchase.Size = New System.Drawing.Size(202, 40)
-        Me.purchase.TabIndex = 13
-        Me.purchase.Text = "Confirm"
-        Me.purchase.UseVisualStyleBackColor = False
         '
         'Purchased_Items
         '

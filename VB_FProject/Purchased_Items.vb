@@ -17,4 +17,9 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         money_bill.Clear()
     End Sub
+
+    Private Sub purchase_Click(sender As Object, e As EventArgs) Handles purchase.Click
+        Dim obj As New Generate_Receipt
+        obj.ShowDialog()
+    End Sub
 End Class
