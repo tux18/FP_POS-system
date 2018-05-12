@@ -28,7 +28,7 @@ Partial Class Main_Menu
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.peripherals = New System.Windows.Forms.Button()
         Me.for_gpu = New System.Windows.Forms.Button()
         Me.for_ram = New System.Windows.Forms.Button()
         Me.for_motherboard = New System.Windows.Forms.Button()
@@ -86,7 +86,7 @@ Partial Class Main_Menu
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.peripherals)
         Me.Panel1.Controls.Add(Me.for_gpu)
         Me.Panel1.Controls.Add(Me.for_ram)
         Me.Panel1.Controls.Add(Me.for_motherboard)
@@ -112,20 +112,20 @@ Partial Class Main_Menu
         Me.Button2.Text = "Configure Items"
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Button1
+        'peripherals
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(0, 440)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(257, 49)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Peripherals"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.peripherals.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.peripherals.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.peripherals.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.peripherals.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.peripherals.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.peripherals.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.peripherals.Location = New System.Drawing.Point(0, 440)
+        Me.peripherals.Name = "peripherals"
+        Me.peripherals.Size = New System.Drawing.Size(257, 49)
+        Me.peripherals.TabIndex = 5
+        Me.peripherals.Text = "Peripherals"
+        Me.peripherals.UseVisualStyleBackColor = False
         '
         'for_gpu
         '
@@ -653,6 +653,6 @@ Partial Class Main_Menu
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents display_contact As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents peripherals As Button
     Friend WithEvents Button2 As Button
 End Class

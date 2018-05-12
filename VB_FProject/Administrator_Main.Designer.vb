@@ -35,12 +35,10 @@ Partial Class Administrator_Main
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.contact_number = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.username = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.password = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.gender = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.birthday = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.address = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -105,7 +103,7 @@ Partial Class Administrator_Main
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button2.Location = New System.Drawing.Point(83, 419)
+        Me.Button2.Location = New System.Drawing.Point(83, 377)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(236, 37)
         Me.Button2.TabIndex = 14
@@ -166,10 +164,10 @@ Partial Class Administrator_Main
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.contact_number, Me.fname, Me.lname, Me.gender, Me.birthday, Me.address, Me.status})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.username, Me.password, Me.fname, Me.lname, Me.status})
         Me.DataGridView1.Location = New System.Drawing.Point(325, 149)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(786, 373)
+        Me.DataGridView1.Size = New System.Drawing.Size(554, 382)
         Me.DataGridView1.TabIndex = 1
         '
         'Panel4
@@ -192,13 +190,16 @@ Partial Class Administrator_Main
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Registered Users"
         '
-        'contact_number
+        'username
         '
-        Me.contact_number.HeaderText = "Contact #"
-        Me.contact_number.Name = "contact_number"
-        Me.contact_number.ReadOnly = True
-        Me.contact_number.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.contact_number.Width = 110
+        Me.username.HeaderText = "Username"
+        Me.username.Name = "username"
+        '
+        'password
+        '
+        Me.password.HeaderText = "Password"
+        Me.password.Name = "password"
+        Me.password.Width = 110
         '
         'fname
         '
@@ -215,27 +216,6 @@ Partial Class Administrator_Main
         Me.lname.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.lname.Width = 105
         '
-        'gender
-        '
-        Me.gender.HeaderText = "Gender"
-        Me.gender.Name = "gender"
-        Me.gender.ReadOnly = True
-        Me.gender.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'birthday
-        '
-        Me.birthday.HeaderText = "Birthday"
-        Me.birthday.Name = "birthday"
-        Me.birthday.ReadOnly = True
-        Me.birthday.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'address
-        '
-        Me.address.HeaderText = "Address"
-        Me.address.Name = "address"
-        Me.address.ReadOnly = True
-        Me.address.Width = 130
-        '
         'status
         '
         Me.status.HeaderText = "Status"
@@ -247,7 +227,7 @@ Partial Class Administrator_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1123, 582)
+        Me.ClientSize = New System.Drawing.Size(882, 538)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.DataGridView1)
@@ -276,12 +256,10 @@ Partial Class Administrator_Main
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents contact_number As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents username As DataGridViewTextBoxColumn
+    Friend WithEvents password As DataGridViewTextBoxColumn
     Friend WithEvents fname As DataGridViewTextBoxColumn
     Friend WithEvents lname As DataGridViewTextBoxColumn
-    Friend WithEvents gender As DataGridViewTextBoxColumn
-    Friend WithEvents birthday As DataGridViewTextBoxColumn
-    Friend WithEvents address As DataGridViewTextBoxColumn
     Friend WithEvents status As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridView1 As DataGridView
 End Class

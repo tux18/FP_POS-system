@@ -17,9 +17,25 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim obj = New Administrator_Main()
-        obj.Show()
-        Me.Dispose()
+
+        Dim getuser As String = username.Text
+        Dim getpass As String = password.Text
+
+
+        If getuser.Equals("admin") And getpass.Equals("admin12345") Then
+            Dim obj = New Administrator_Main()
+            obj.Show()
+            Me.Dispose()
+
+        Else
+            MessageBox.Show("ERROR: Invalid Username or Password", "Authentication", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End If
+
+
+
+
+
     End Sub
 
     Private Sub Admin_Form_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

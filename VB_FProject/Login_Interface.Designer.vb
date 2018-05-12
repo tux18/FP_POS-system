@@ -210,6 +210,7 @@ Partial Class Login_Interface
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel3)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Login_Interface"
         Me.Text = "Login Interface"
         Me.Panel1.ResumeLayout(False)

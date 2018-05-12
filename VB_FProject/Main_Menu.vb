@@ -110,10 +110,78 @@ Public Class Main_Menu
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles for_ram.Click
         change_name.Text = "RAM"
 
+        ' The Code Below will fix the adding or displaying in the table
+        ' where the problem is continous adding of value in the DataGridView
+
+        system_items.Rows.Clear() ' The DataGridView will Clear all the Remaining Data
+        dt.Rows.Clear() ' Data Table that holds the value from Data Source will be cleared
+
+
+
+
+
+
+        Try
+            Dim query As String = "select * from ram_items"
+
+            Dim ds As New DataSet()
+            cmd = New MySqlCommand(query, conn)
+            'adt.Fill(ds, "processor_items")
+
+            Dim adt = New MySqlDataAdapter(cmd)
+            adt.Fill(dt)
+
+            For Each row In dt.Rows
+                'Call the Function Populate here
+                Populate(row(0), row(1), row(2), row(3))
+            Next
+            'system_items.DataSource = ds.Tables(0)
+
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("ERROR: Not Connected into Database", "Connection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+
+
+
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles for_gpu.Click
         change_name.Text = "Graphics Card"
+
+        ' The Code Below will fix the adding or displaying in the table
+        ' where the problem is continous adding of value in the DataGridView
+
+        system_items.Rows.Clear() ' The DataGridView will Clear all the Remaining Data
+        dt.Rows.Clear() ' Data Table that holds the value from Data Source will be cleared
+
+
+
+
+
+
+        Try
+            Dim query As String = "select * from gpu_items"
+
+            Dim ds As New DataSet()
+            cmd = New MySqlCommand(query, conn)
+            'adt.Fill(ds, "processor_items")
+
+            Dim adt = New MySqlDataAdapter(cmd)
+            adt.Fill(dt)
+
+            For Each row In dt.Rows
+                'Call the Function Populate here
+                Populate(row(0), row(1), row(2), row(3))
+            Next
+            'system_items.DataSource = ds.Tables(0)
+
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("ERROR: Not Connected into Database", "Connection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+
+
     End Sub
 
     Private Sub payment_Click(sender As Object, e As EventArgs) Handles payment.Click
@@ -141,5 +209,35 @@ Public Class Main_Menu
         obj.ShowDialog()
     End Sub
 
+    Private Sub peripherals_Click(sender As Object, e As EventArgs) Handles peripherals.Click
+        change_name.Text = "Peripherals"
 
+        ' The Code Below will fix the adding or displaying in the table
+        ' where the problem is continous adding of value in the DataGridView
+
+        system_items.Rows.Clear() ' The DataGridView will Clear all the Remaining Data
+        dt.Rows.Clear() ' Data Table that holds the value from Data Source will be cleared
+
+        Try
+            Dim query As String = "select * from peripheral_items"
+
+            Dim ds As New DataSet()
+            cmd = New MySqlCommand(query, conn)
+            'adt.Fill(ds, "processor_items")
+
+            Dim adt = New MySqlDataAdapter(cmd)
+            adt.Fill(dt)
+
+            For Each row In dt.Rows
+                'Call the Function Populate here
+                Populate(row(0), row(1), row(2), row(3))
+            Next
+            'system_items.DataSource = ds.Tables(0)
+
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("ERROR: Not Connected into Database", "Connection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+
+    End Sub
 End Class
