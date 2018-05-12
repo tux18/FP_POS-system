@@ -24,17 +24,17 @@ Partial Class registration
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lname = New System.Windows.Forms.TextBox()
+        Me.fname = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.fname = New System.Windows.Forms.TextBox()
-        Me.contact_num = New System.Windows.Forms.TextBox()
+        Me.pass = New System.Windows.Forms.TextBox()
+        Me.user = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.register = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.lname = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -59,13 +59,13 @@ Partial Class registration
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Registration Form"
         '
-        'lname
+        'fname
         '
-        Me.lname.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lname.Location = New System.Drawing.Point(66, 264)
-        Me.lname.Name = "lname"
-        Me.lname.Size = New System.Drawing.Size(241, 29)
-        Me.lname.TabIndex = 2
+        Me.fname.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fname.Location = New System.Drawing.Point(66, 264)
+        Me.fname.Name = "fname"
+        Me.fname.Size = New System.Drawing.Size(241, 29)
+        Me.fname.TabIndex = 2
         '
         'Label2
         '
@@ -87,22 +87,22 @@ Partial Class registration
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Lastname"
         '
-        'fname
+        'pass
         '
-        Me.fname.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fname.Location = New System.Drawing.Point(66, 196)
-        Me.fname.Name = "fname"
-        Me.fname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.fname.Size = New System.Drawing.Size(241, 29)
-        Me.fname.TabIndex = 1
+        Me.pass.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.pass.Location = New System.Drawing.Point(66, 196)
+        Me.pass.Name = "pass"
+        Me.pass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.pass.Size = New System.Drawing.Size(241, 29)
+        Me.pass.TabIndex = 1
         '
-        'contact_num
+        'user
         '
-        Me.contact_num.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.contact_num.Location = New System.Drawing.Point(66, 129)
-        Me.contact_num.Name = "contact_num"
-        Me.contact_num.Size = New System.Drawing.Size(241, 29)
-        Me.contact_num.TabIndex = 8
+        Me.user.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.user.Location = New System.Drawing.Point(66, 129)
+        Me.user.Name = "user"
+        Me.user.Size = New System.Drawing.Size(241, 29)
+        Me.user.TabIndex = 8
         '
         'Label6
         '
@@ -164,28 +164,28 @@ Partial Class registration
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Enter Password"
         '
-        'TextBox1
+        'lname
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(66, 337)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(241, 29)
-        Me.TextBox1.TabIndex = 11
+        Me.lname.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lname.Location = New System.Drawing.Point(66, 337)
+        Me.lname.Name = "lname"
+        Me.lname.Size = New System.Drawing.Size(241, 29)
+        Me.lname.TabIndex = 11
         '
         'registration
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(360, 514)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.lname)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.contact_num)
+        Me.Controls.Add(Me.user)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.lname)
         Me.Controls.Add(Me.fname)
+        Me.Controls.Add(Me.pass)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "registration"
         Me.Text = "Registration"
@@ -199,15 +199,15 @@ Partial Class registration
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents lname As TextBox
+    Friend WithEvents fname As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents fname As TextBox
-    Friend WithEvents contact_num As TextBox
+    Friend WithEvents pass As TextBox
+    Friend WithEvents user As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents register As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents lname As TextBox
 End Class

@@ -29,12 +29,12 @@ Public Class Login_Interface
         Dim getuser As String = user_name.Text
         Dim getpass As String = password.Text
 
-        Dim test As String
 
 
         conn.Open()
         ' Retrieve the user and password in database 
-        Dim query As String = "SELECT username,password FROM accounts"
+        Dim query As String = "SELECT username,password,fname FROM accounts"
+        Dim get_name_query As String = "SELECT fname From accounts"
         cmd = New MySqlCommand(query, conn)
 
         reader = cmd.ExecuteReader
@@ -42,6 +42,8 @@ Public Class Login_Interface
         While reader.Read
             If reader.GetString("username").Equals(getuser) And reader.GetString("password").Equals(getpass) Then
                 MessageBox.Show("Login Successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                'reader.GetString("fname") -> this will retrieve the name in the Database
                 mm.Show()
                 flag = False
                 Exit While

@@ -24,8 +24,8 @@ Partial Class Main_Menu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main_Menu))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.peripherals = New System.Windows.Forms.Button()
@@ -38,7 +38,6 @@ Partial Class Main_Menu
         Me.aa = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.info = New System.Windows.Forms.Panel()
         Me.main_logout = New System.Windows.Forms.Panel()
         Me.change_name = New System.Windows.Forms.Label()
         Me.system_items = New System.Windows.Forms.DataGridView()
@@ -231,23 +230,12 @@ Partial Class Main_Menu
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.info)
         Me.Panel3.Controls.Add(Me.main_logout)
         Me.Panel3.Controls.Add(Me.change_name)
         Me.Panel3.Location = New System.Drawing.Point(256, -3)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1044, 78)
         Me.Panel3.TabIndex = 1
-        '
-        'info
-        '
-        Me.info.BackgroundImage = CType(resources.GetObject("info.BackgroundImage"), System.Drawing.Image)
-        Me.info.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.info.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.info.Location = New System.Drawing.Point(880, 15)
-        Me.info.Name = "info"
-        Me.info.Size = New System.Drawing.Size(60, 50)
-        Me.info.TabIndex = 2
         '
         'main_logout
         '
@@ -284,8 +272,8 @@ Partial Class Main_Menu
         '
         'prodname
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.prodname.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.prodname.DefaultCellStyle = DataGridViewCellStyle3
         Me.prodname.HeaderText = "Product Name"
         Me.prodname.Name = "prodname"
         Me.prodname.ReadOnly = True
@@ -440,8 +428,8 @@ Partial Class Main_Menu
         '
         'DataGridViewTextBoxColumn1
         '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridViewTextBoxColumn1.HeaderText = "Product Name"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
@@ -641,7 +629,6 @@ Partial Class Main_Menu
     Friend WithEvents total As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents info As Panel
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents tooltip As ToolTip

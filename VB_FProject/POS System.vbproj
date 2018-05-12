@@ -170,6 +170,7 @@
     <Compile Include="SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ValuePasser.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Administrator_Main.resx">

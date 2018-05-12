@@ -20,7 +20,7 @@ Public Class Main_Menu
     Private Sub Main_Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
         tooltip.SetToolTip(main_logout, "Log Out")
-        tooltip.SetToolTip(info, "Information About the System")
+
 
     End Sub
 
@@ -240,4 +240,6 @@ Public Class Main_Menu
         End Try
 
     End Sub
+
+
 End Class
