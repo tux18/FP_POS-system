@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2018 at 03:38 PM
+-- Generation Time: May 12, 2018 at 09:19 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -21,6 +21,35 @@ SET time_zone = "+00:00";
 --
 -- Database: `pos_database`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accounts`
+--
+
+CREATE TABLE `accounts` (
+  `contact_number` varchar(50) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `gender` varchar(255) NOT NULL,
+  `birth_date` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Accounts for Users';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer`
+--
+
+CREATE TABLE `customer` (
+  `cust_id` varchar(100) NOT NULL,
+  `full_name` varchar(255) NOT NULL,
+  `gender` varchar(255) NOT NULL,
+  `contact_num` varchar(25) NOT NULL,
+  `address` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for Customer';
 
 -- --------------------------------------------------------
 
@@ -47,6 +76,15 @@ CREATE TABLE `motherboard_items` (
   `price` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `motherboard_items`
+--
+
+INSERT INTO `motherboard_items` (`item_name`, `qty`, `price`, `status`) VALUES
+('Biostar HI-FI A70U3P FM2+', '40', '2300', 'On-Stock'),
+('GB B360 AORUS GAMING 3', '5', '7299', 'On-Stock'),
+('Gigabyte GA-H110M-DS2 7th Gen', '10', '3100', 'On-Stock');
 
 -- --------------------------------------------------------
 
@@ -99,6 +137,18 @@ CREATE TABLE `ram_items` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `accounts`
+--
+ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`contact_number`);
+
+--
+-- Indexes for table `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`cust_id`);
 
 --
 -- Indexes for table `motherboard_items`
