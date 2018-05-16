@@ -30,34 +30,41 @@ Public Class Login_Interface
         Dim getpass As String = password.Text
 
 
+        Try
+            conn.Open()
+            ' Retrieve the user and password in database 
+            Dim query As String = "SELECT username,password,fname FROM accounts"
+            Dim get_name_query As String = "SELECT fname From accounts"
+            cmd = New MySqlCommand(query, conn)
 
-        conn.Open()
-        ' Retrieve the user and password in database 
-        Dim query As String = "SELECT username,password,fname FROM accounts"
-        Dim get_name_query As String = "SELECT fname From accounts"
-        cmd = New MySqlCommand(query, conn)
+            reader = cmd.ExecuteReader
 
-        reader = cmd.ExecuteReader
+            While reader.Read
+                If reader.GetString("username").Equals(getuser) And reader.GetString("password").Equals(getpass) Then
+                    MessageBox.Show("Login Successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-        While reader.Read
-            If reader.GetString("username").Equals(getuser) And reader.GetString("password").Equals(getpass) Then
-                MessageBox.Show("Login Successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    'reader.GetString("fname") -> this will retrieve the name in the Database
+                    mm.Show()
+                    flag = False
+                    Exit While
+                Else
+                    flag = True
 
-                'reader.GetString("fname") -> this will retrieve the name in the Database
-                mm.Show()
-                flag = False
-                Exit While
-            Else
-                flag = True
+                End If
 
-            End If
+            End While
 
-        End While
+            ' Close and Dispose the Connection
 
-        ' Close and Dispose the Connection
+            conn.Close()
+            conn.Dispose()
+        Catch ex As MySqlException
+            MessageBox.Show("ERROR: Not Connected Into Database", "Database ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+            Dim obj As New Login_Interface
+            obj.Show()
+        End Try
 
-        conn.Close()
-        conn.Dispose()
 
 
         If flag.Equals(True) Then
@@ -68,10 +75,10 @@ Public Class Login_Interface
             Dim obj As New Login_Interface
             obj.Show()
         Else
-
+            Me.Dispose()
 
         End If
-        Me.Hide()
+
     End Sub
 
     Private Sub Login_Interface_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

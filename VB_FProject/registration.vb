@@ -38,34 +38,41 @@ Public Class registration
         Dim getfname As String = fname.Text
         Dim getlname As String = lname.Text
         Dim checked As String
-        conn.Open()
 
-        If getuser.Equals("") And getpass.Equals("") And getfname.Equals("") And getlname.Equals("") Then
-            MessageBox.Show("ERROR: Please Fill out the Fields", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            user.Focus()
-        Else
-            Dim query As String = "INSERT INTO accounts (username,password,fname,lname) VALUE (" & "'" & getuser & "'" & "," & "'" & getpass & "'" & "," & "'" & getfname _
-                & "'" & "," & "'" & getlname & "'" & ")"
+        Try
+            conn.Open()
 
+            If getuser.Equals("") And getpass.Equals("") And getfname.Equals("") And getlname.Equals("") Then
+                MessageBox.Show("ERROR: Please Fill out the Fields", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                user.Focus()
+            Else
+                Dim query As String = "INSERT INTO accounts (username,password,fname,lname) VALUE (" & "'" & getuser & "'" & "," & "'" & getpass & "'" & "," & "'" & getfname _
+                    & "'" & "," & "'" & getlname & "'" & ")"
 
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery() ' Execute the query
 
-            cmd = New MySqlCommand(query, conn)
-            cmd.ExecuteNonQuery() ' Execute the query
+                checked = MessageBox.Show("Successfully Registered", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            checked = MessageBox.Show("Successfully Registered", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                If checked.Equals("1") Then
+                    user.Clear()
+                    pass.Clear()
+                    fname.Clear()
+                    lname.Clear()
 
-            If checked.Equals("1") Then
-                user.Clear()
-                pass.Clear()
-                fname.Clear()
-                lname.Clear()
+                End If
 
             End If
 
-        End If
+            conn.Close()
+            conn.Dispose()
+        Catch ex As MySqlException
+            MessageBox.Show("ERROR: Not Connected Into Database", "Database ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+            Dim obj As New registration()
+            obj.Show()
+        End Try
 
-        conn.Close()
-        conn.Dispose()
 
 
 
