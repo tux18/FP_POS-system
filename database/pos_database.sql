@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2018 at 09:19 AM
+-- Generation Time: May 17, 2018 at 06:23 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -29,13 +29,24 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `accounts` (
-  `contact_number` varchar(50) NOT NULL,
-  `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) NOT NULL,
-  `gender` varchar(255) NOT NULL,
-  `birth_date` varchar(255) NOT NULL,
-  `address` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Accounts for Users';
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`username`, `password`, `fname`, `lname`) VALUES
+('asdasd', 'asdasd', 'asdasd', 'fdgfdg'),
+('google', 'google', 'googleman', 'wanpage'),
+('Mike', 'asdasd', 'asdasd', 'fdgfdg'),
+('qweqwe', 'asdqwe', 'dfgfdg', 'fdgdg'),
+('test', 'test', 'Justin', 'Tuqs'),
+('test123', 'qwe', 'Junior', 'Barrow'),
+('tom123', '11111', 'James', 'Tom');
 
 -- --------------------------------------------------------
 
@@ -51,6 +62,18 @@ CREATE TABLE `customer` (
   `address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for Customer';
 
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`cust_id`, `full_name`, `gender`, `contact_num`, `address`) VALUES
+('001', 'Robert Downy', 'Male', '09356669922', 'Alpha Centaurus'),
+('03342', 'Jonathan Millers', 'Male', '00100101010', 'Capella Centaurus'),
+('1111', 'Helloq', 'Male', '9098765', 'Bonzayzzz'),
+('23232', 'qwe', 'Male', '879797', 'rtt'),
+('23344', 'Jobert Norma', 'MALE', '0022222333', 'Aurora Regalus'),
+('5555', 'Justin', 'Male', '099999999', 'San Agustin');
+
 -- --------------------------------------------------------
 
 --
@@ -63,6 +86,18 @@ CREATE TABLE `gpu_items` (
   `price` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gpu_items`
+--
+
+INSERT INTO `gpu_items` (`item_name`, `qty`, `price`, `status`) VALUES
+('AMD Radeon RX560 4GB OC', '5', '9000', 'On-Stock'),
+('Geforce 210 1GB DDR3 64 Bit', '2', '1600', 'On-Stock'),
+('GeForce GT 730 2GB DDR3', '5', '3400', 'On-Stock'),
+('GeForce GTX1050 TI 4GB 128Bit', '10', '9700', 'On-Stock'),
+('Palit GTX1060 6GB', '5', '18000', 'On-Stock'),
+('Zotac GTX1050 Ti OC 4GB 128Bit', '10', '10000', 'On-Stock');
 
 -- --------------------------------------------------------
 
@@ -85,6 +120,29 @@ INSERT INTO `motherboard_items` (`item_name`, `qty`, `price`, `status`) VALUES
 ('Biostar HI-FI A70U3P FM2+', '40', '2300', 'On-Stock'),
 ('GB B360 AORUS GAMING 3', '5', '7299', 'On-Stock'),
 ('Gigabyte GA-H110M-DS2 7th Gen', '10', '3100', 'On-Stock');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `peripheral_items`
+--
+
+CREATE TABLE `peripheral_items` (
+  `item_name` varchar(255) NOT NULL,
+  `price` varchar(255) NOT NULL,
+  `qty` varchar(15) NOT NULL,
+  `status` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `peripheral_items`
+--
+
+INSERT INTO `peripheral_items` (`item_name`, `price`, `qty`, `status`) VALUES
+('A4tech KRS-83 Keyboard', '350', '50', 'On-Stock'),
+('Dell KB212-B USB Keyboard', '400', '15', 'On-Stock'),
+('Logitech B100 Mouse', '250', '15', 'On-Stock'),
+('Zeus M-110 Gaming Mouse', '150', '15', 'On-Stock');
 
 -- --------------------------------------------------------
 
@@ -135,6 +193,18 @@ CREATE TABLE `ram_items` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `ram_items`
+--
+
+INSERT INTO `ram_items` (`item_name`, `qty`, `price`, `status`) VALUES
+('Avexir 4GB 2400MHz DDR4', '15', '2800', 'On-Stock'),
+('Corsair V 16GB 2400MHz DDR4', '20', '11000', 'On-Stock'),
+('Gskill Aegis 4GB 2400MHz DDR4', '15', '2800', 'On-Stock'),
+('Gskill Trident 16GB 3000MHz DDR4', '15', '14500', 'On-Stock'),
+('HyperX Fury 8GB 1600MHz DDR3', '20', '3200', 'On-Stock'),
+('HyperX Fury 8GB 2400MHz DDR4', '20', '5700', 'On-Stock');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -142,7 +212,7 @@ CREATE TABLE `ram_items` (
 -- Indexes for table `accounts`
 --
 ALTER TABLE `accounts`
-  ADD PRIMARY KEY (`contact_number`);
+  ADD PRIMARY KEY (`username`);
 
 --
 -- Indexes for table `customer`
@@ -151,15 +221,33 @@ ALTER TABLE `customer`
   ADD PRIMARY KEY (`cust_id`);
 
 --
+-- Indexes for table `gpu_items`
+--
+ALTER TABLE `gpu_items`
+  ADD PRIMARY KEY (`item_name`);
+
+--
 -- Indexes for table `motherboard_items`
 --
 ALTER TABLE `motherboard_items`
   ADD PRIMARY KEY (`item_name`);
 
 --
+-- Indexes for table `peripheral_items`
+--
+ALTER TABLE `peripheral_items`
+  ADD PRIMARY KEY (`item_name`);
+
+--
 -- Indexes for table `processor_items`
 --
 ALTER TABLE `processor_items`
+  ADD PRIMARY KEY (`item_name`);
+
+--
+-- Indexes for table `ram_items`
+--
+ALTER TABLE `ram_items`
   ADD PRIMARY KEY (`item_name`);
 COMMIT;
 
