@@ -34,6 +34,7 @@ Partial Class Customer
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.invisible_data = New System.Windows.Forms.Label()
         Me.clear = New System.Windows.Forms.Button()
         Me.add_cust = New System.Windows.Forms.Button()
         Me.update_cust = New System.Windows.Forms.Button()
@@ -50,7 +51,6 @@ Partial Class Customer
         Me.Label3 = New System.Windows.Forms.Label()
         Me.fullname = New System.Windows.Forms.TextBox()
         Me.id_cust = New System.Windows.Forms.TextBox()
-        Me.invisible_data = New System.Windows.Forms.Label()
         CType(Me.customer_list, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -175,6 +175,16 @@ Partial Class Customer
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(425, 510)
         Me.Panel4.TabIndex = 3
+        '
+        'invisible_data
+        '
+        Me.invisible_data.AutoSize = True
+        Me.invisible_data.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.invisible_data.Location = New System.Drawing.Point(34, 21)
+        Me.invisible_data.Name = "invisible_data"
+        Me.invisible_data.Size = New System.Drawing.Size(39, 13)
+        Me.invisible_data.TabIndex = 16
+        Me.invisible_data.Text = "Label8"
         '
         'clear
         '
@@ -362,16 +372,6 @@ Partial Class Customer
         Me.id_cust.Name = "id_cust"
         Me.id_cust.Size = New System.Drawing.Size(173, 24)
         Me.id_cust.TabIndex = 0
-        '
-        'invisible_data
-        '
-        Me.invisible_data.AutoSize = True
-        Me.invisible_data.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.invisible_data.Location = New System.Drawing.Point(34, 21)
-        Me.invisible_data.Name = "invisible_data"
-        Me.invisible_data.Size = New System.Drawing.Size(39, 13)
-        Me.invisible_data.TabIndex = 16
-        Me.invisible_data.Text = "Label8"
         '
         'Customer
         '

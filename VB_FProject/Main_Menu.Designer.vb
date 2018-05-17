@@ -24,8 +24,8 @@ Partial Class Main_Menu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main_Menu))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.peripherals = New System.Windows.Forms.Button()
@@ -70,6 +70,7 @@ Partial Class Main_Menu
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.tooltip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.display_gender = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.user_info.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -272,8 +273,8 @@ Partial Class Main_Menu
         '
         'prodname
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.prodname.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.prodname.DefaultCellStyle = DataGridViewCellStyle1
         Me.prodname.HeaderText = "Product Name"
         Me.prodname.Name = "prodname"
         Me.prodname.ReadOnly = True
@@ -309,6 +310,7 @@ Partial Class Main_Menu
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.display_gender)
         Me.Panel2.Controls.Add(Me.display_contact)
         Me.Panel2.Controls.Add(Me.Button8)
         Me.Panel2.Controls.Add(Me.Customer_btn)
@@ -428,8 +430,8 @@ Partial Class Main_Menu
         '
         'DataGridViewTextBoxColumn1
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewTextBoxColumn1.HeaderText = "Product Name"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
@@ -559,6 +561,17 @@ Partial Class Main_Menu
         Me.Panel9.Size = New System.Drawing.Size(43, 36)
         Me.Panel9.TabIndex = 7
         '
+        'display_gender
+        '
+        Me.display_gender.AutoSize = True
+        Me.display_gender.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.display_gender.Location = New System.Drawing.Point(188, 99)
+        Me.display_gender.Name = "display_gender"
+        Me.display_gender.Size = New System.Drawing.Size(63, 18)
+        Me.display_gender.TabIndex = 6
+        Me.display_gender.Text = "Gender"
+        Me.display_gender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Main_Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -642,4 +655,5 @@ Partial Class Main_Menu
     Friend WithEvents display_contact As Label
     Friend WithEvents peripherals As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents display_gender As Label
 End Class

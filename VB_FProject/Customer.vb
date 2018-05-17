@@ -52,10 +52,12 @@ Public Class Customer
 
     Private Sub Customer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Me.Dispose()
+        Main_Menu.Show()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles cancel_cust.Click
         Me.Dispose() ' Cancel Button
+        Main_Menu.Show()
     End Sub
 
 
@@ -91,6 +93,7 @@ Public Class Customer
     Private Sub add_cust_Click(sender As Object, e As EventArgs) Handles add_cust.Click
         ' PROBLEM: Unhandle ERROR when database or the application is not connected into Database
         ' No MessageBox will inform the user
+
         ' ADD CUSTOMER
         Dim dt As New DataTable()
         Dim get_id = id_cust.Text
@@ -110,6 +113,7 @@ Public Class Customer
             id_cust.Focus()
 
         Else
+
             Try
                 Dim query As String = "INSERT INTO customer (cust_id,full_name,gender,contact_num,address) VALUE (" & "'" & get_id & "'" & "," & "'" & get_name & "'" & "," & "'" & get_gender _
                    & "'" & "," & "'" & get_contact & "'" & "," & "'" & get_address & "'" & ")"
@@ -127,11 +131,15 @@ Public Class Customer
                     c_gender.Text = ""
                     customer_list.Refresh()
                 End If
-                customer_list.Rows.Clear() ' The DataGridView will Clear all the Remaining Data
-                dt.Rows.Clear() ' Data Table that holds the value from Data Source will be cleared
+
+
+                conn.Close()
+                conn.Dispose()
             Catch ex As MySqlException
                 MessageBox.Show("The Data is already inserted", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End Try
+            customer_list.Rows.Clear() ' The DataGridView will Clear all the Remaining Data
+            dt.Rows.Clear() ' Data Table that holds the value from Data Source will be cleared
 
             ' Update The DataGridView Table(customer_list)
             Try
@@ -317,6 +325,19 @@ Public Class Customer
             End Try
 
         End If
+
+    End Sub
+
+    Private Sub select_cust_Click(sender As Object, e As EventArgs) Handles select_cust.Click
+
+
+
+        Main_Menu.display_name.Text = fullname.Text
+        Main_Menu.display_contact.Text = c_contact_number.Text
+        Main_Menu.display_gender.Text = c_gender.Text
+        Main_Menu.Show()
+
+        Me.Dispose()
 
     End Sub
 End Class

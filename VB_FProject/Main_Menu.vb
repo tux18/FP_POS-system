@@ -6,8 +6,9 @@ Public Class Main_Menu
     Dim conn As New MySqlConnection(make_connection)
     Dim cmd As New MySqlCommand
     Dim dt As New DataTable()
-
-
+    ' Public val1 As String
+    ' Public val2 As String
+    'Public val3 As String
     ' Function That will Populate the DataGridView
     Private Sub Populate(name As String, qty As String, price As String, status As String)
         Dim row As String() = New String() {name, qty, price, status}
@@ -21,7 +22,9 @@ Public Class Main_Menu
     Private Sub Main_Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
         tooltip.SetToolTip(main_logout, "Log Out")
-
+        'display_name.Text = val1
+        'display_contact.Text = val2
+        'display_gender.Text = val3
 
     End Sub
 
@@ -196,7 +199,8 @@ Public Class Main_Menu
         'customer.ShowDialog()
 
         Dim customer = New Customer()
-        customer.ShowDialog()
+        customer.Show()
+        Me.Dispose()
 
 
     End Sub
