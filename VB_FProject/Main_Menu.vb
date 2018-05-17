@@ -210,8 +210,9 @@ Public Class Main_Menu
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
         Dim obj As New Crud()
-        obj.ShowDialog()
+        obj.Show()
     End Sub
 
     Private Sub peripherals_Click(sender As Object, e As EventArgs) Handles peripherals.Click
