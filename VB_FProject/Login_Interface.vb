@@ -7,7 +7,7 @@ Public Class Login_Interface
     Dim conn As New MySqlConnection(make_connection)
     Dim cmd As New MySqlCommand
     Dim reader As MySqlDataReader
-    Dim mm = New Main_Menu()
+
 
     Dim flag As Boolean = False
     Private Sub Customer_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -28,13 +28,13 @@ Public Class Login_Interface
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles login.Click
         Dim getuser As String = user_name.Text
         Dim getpass As String = password.Text
-
+        Dim mm = New Main_Menu()
 
         Try
             conn.Open()
             ' Retrieve the user and password in database 
             Dim query As String = "SELECT username,password,fname FROM accounts"
-            Dim get_name_query As String = "SELECT fname From accounts"
+            'Dim get_name_query As String = "SELECT fname From accounts"
             cmd = New MySqlCommand(query, conn)
 
             reader = cmd.ExecuteReader
@@ -45,6 +45,8 @@ Public Class Login_Interface
 
                     'reader.GetString("fname") -> this will retrieve the name in the Database
                     mm.Show()
+                    mm.user_name.Text = reader.GetString("fname")
+
                     flag = False
                     Exit While
                 Else

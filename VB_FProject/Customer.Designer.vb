@@ -23,12 +23,19 @@ Partial Class Customer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.customer_list = New System.Windows.Forms.DataGridView()
+        Me.cust_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.full_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.gender = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.contact_num = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.address = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.clear = New System.Windows.Forms.Button()
+        Me.add_cust = New System.Windows.Forms.Button()
         Me.update_cust = New System.Windows.Forms.Button()
         Me.delete_cust = New System.Windows.Forms.Button()
         Me.cancel_cust = New System.Windows.Forms.Button()
@@ -43,12 +50,7 @@ Partial Class Customer
         Me.Label3 = New System.Windows.Forms.Label()
         Me.fullname = New System.Windows.Forms.TextBox()
         Me.id_cust = New System.Windows.Forms.TextBox()
-        Me.add_cust = New System.Windows.Forms.Button()
-        Me.cust_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.full_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.gender = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.contact_num = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.address = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.invisible_data = New System.Windows.Forms.Label()
         CType(Me.customer_list, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -61,12 +63,44 @@ Partial Class Customer
         Me.customer_list.AllowUserToAddRows = False
         Me.customer_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.customer_list.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cust_id, Me.full_name, Me.gender, Me.contact_num, Me.address})
-        Me.customer_list.Location = New System.Drawing.Point(0, 56)
+        Me.customer_list.Location = New System.Drawing.Point(0, 55)
         Me.customer_list.Name = "customer_list"
         Me.customer_list.ReadOnly = True
         Me.customer_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.customer_list.Size = New System.Drawing.Size(635, 355)
+        Me.customer_list.Size = New System.Drawing.Size(635, 411)
         Me.customer_list.TabIndex = 0
+        '
+        'cust_id
+        '
+        Me.cust_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.cust_id.HeaderText = "Customer ID"
+        Me.cust_id.Name = "cust_id"
+        Me.cust_id.ReadOnly = True
+        '
+        'full_name
+        '
+        Me.full_name.HeaderText = "Full Name"
+        Me.full_name.Name = "full_name"
+        Me.full_name.ReadOnly = True
+        '
+        'gender
+        '
+        Me.gender.HeaderText = "Gender"
+        Me.gender.Name = "gender"
+        Me.gender.ReadOnly = True
+        '
+        'contact_num
+        '
+        Me.contact_num.HeaderText = "Contact #"
+        Me.contact_num.Name = "contact_num"
+        Me.contact_num.ReadOnly = True
+        '
+        'address
+        '
+        Me.address.HeaderText = "Address"
+        Me.address.Name = "address"
+        Me.address.ReadOnly = True
+        Me.address.Width = 200
         '
         'Panel1
         '
@@ -94,7 +128,7 @@ Partial Class Customer
         Me.Panel2.Controls.Add(Me.customer_list)
         Me.Panel2.Location = New System.Drawing.Point(419, 99)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(638, 411)
+        Me.Panel2.Size = New System.Drawing.Size(638, 481)
         Me.Panel2.TabIndex = 2
         '
         'Panel3
@@ -120,6 +154,8 @@ Partial Class Customer
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.invisible_data)
+        Me.Panel4.Controls.Add(Me.clear)
         Me.Panel4.Controls.Add(Me.add_cust)
         Me.Panel4.Controls.Add(Me.update_cust)
         Me.Panel4.Controls.Add(Me.delete_cust)
@@ -137,8 +173,38 @@ Partial Class Customer
         Me.Panel4.Controls.Add(Me.id_cust)
         Me.Panel4.Location = New System.Drawing.Point(-9, 92)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(425, 476)
+        Me.Panel4.Size = New System.Drawing.Size(425, 510)
         Me.Panel4.TabIndex = 3
+        '
+        'clear
+        '
+        Me.clear.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.clear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.clear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.clear.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clear.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.clear.Location = New System.Drawing.Point(99, 247)
+        Me.clear.Name = "clear"
+        Me.clear.Size = New System.Drawing.Size(236, 30)
+        Me.clear.TabIndex = 15
+        Me.clear.Text = "Clear"
+        Me.clear.UseVisualStyleBackColor = False
+        '
+        'add_cust
+        '
+        Me.add_cust.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.add_cust.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.add_cust.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.add_cust.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.add_cust.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.add_cust.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.add_cust.Location = New System.Drawing.Point(99, 357)
+        Me.add_cust.Name = "add_cust"
+        Me.add_cust.Size = New System.Drawing.Size(236, 49)
+        Me.add_cust.TabIndex = 14
+        Me.add_cust.Text = "Add Customer"
+        Me.add_cust.UseVisualStyleBackColor = False
         '
         'update_cust
         '
@@ -148,7 +214,7 @@ Partial Class Customer
         Me.update_cust.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.update_cust.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.update_cust.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.update_cust.Location = New System.Drawing.Point(34, 365)
+        Me.update_cust.Location = New System.Drawing.Point(34, 412)
         Me.update_cust.Name = "update_cust"
         Me.update_cust.Size = New System.Drawing.Size(176, 40)
         Me.update_cust.TabIndex = 13
@@ -163,7 +229,7 @@ Partial Class Customer
         Me.delete_cust.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.delete_cust.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.delete_cust.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.delete_cust.Location = New System.Drawing.Point(216, 365)
+        Me.delete_cust.Location = New System.Drawing.Point(216, 412)
         Me.delete_cust.Name = "delete_cust"
         Me.delete_cust.Size = New System.Drawing.Size(176, 40)
         Me.delete_cust.TabIndex = 12
@@ -178,7 +244,7 @@ Partial Class Customer
         Me.cancel_cust.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cancel_cust.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cancel_cust.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.cancel_cust.Location = New System.Drawing.Point(99, 411)
+        Me.cancel_cust.Location = New System.Drawing.Point(99, 458)
         Me.cancel_cust.Name = "cancel_cust"
         Me.cancel_cust.Size = New System.Drawing.Size(236, 30)
         Me.cancel_cust.TabIndex = 11
@@ -193,9 +259,9 @@ Partial Class Customer
         Me.select_cust.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.select_cust.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.select_cust.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.select_cust.Location = New System.Drawing.Point(99, 246)
+        Me.select_cust.Location = New System.Drawing.Point(99, 297)
         Me.select_cust.Name = "select_cust"
-        Me.select_cust.Size = New System.Drawing.Size(236, 57)
+        Me.select_cust.Size = New System.Drawing.Size(236, 54)
         Me.select_cust.TabIndex = 10
         Me.select_cust.Text = "Select Customer"
         Me.select_cust.UseVisualStyleBackColor = False
@@ -205,7 +271,7 @@ Partial Class Customer
         Me.c_contact_number.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.c_contact_number.Location = New System.Drawing.Point(37, 207)
         Me.c_contact_number.Name = "c_contact_number"
-        Me.c_contact_number.Size = New System.Drawing.Size(186, 24)
+        Me.c_contact_number.Size = New System.Drawing.Size(173, 24)
         Me.c_contact_number.TabIndex = 9
         '
         'Label7
@@ -224,7 +290,7 @@ Partial Class Customer
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label6.Location = New System.Drawing.Point(231, 186)
+        Me.Label6.Location = New System.Drawing.Point(213, 184)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(57, 18)
         Me.Label6.TabIndex = 7
@@ -235,9 +301,9 @@ Partial Class Customer
         Me.c_gender.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.c_gender.FormattingEnabled = True
         Me.c_gender.Items.AddRange(New Object() {"Male", "Female"})
-        Me.c_gender.Location = New System.Drawing.Point(234, 205)
+        Me.c_gender.Location = New System.Drawing.Point(216, 205)
         Me.c_gender.Name = "c_gender"
-        Me.c_gender.Size = New System.Drawing.Size(168, 26)
+        Me.c_gender.Size = New System.Drawing.Size(186, 26)
         Me.c_gender.TabIndex = 6
         '
         'full_address
@@ -294,61 +360,24 @@ Partial Class Customer
         Me.id_cust.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.id_cust.Location = New System.Drawing.Point(37, 62)
         Me.id_cust.Name = "id_cust"
-        Me.id_cust.Size = New System.Drawing.Size(155, 24)
+        Me.id_cust.Size = New System.Drawing.Size(173, 24)
         Me.id_cust.TabIndex = 0
         '
-        'add_cust
+        'invisible_data
         '
-        Me.add_cust.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.add_cust.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.add_cust.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.add_cust.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.add_cust.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.add_cust.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.add_cust.Location = New System.Drawing.Point(99, 319)
-        Me.add_cust.Name = "add_cust"
-        Me.add_cust.Size = New System.Drawing.Size(236, 40)
-        Me.add_cust.TabIndex = 14
-        Me.add_cust.Text = "Add Customer"
-        Me.add_cust.UseVisualStyleBackColor = False
-        '
-        'cust_id
-        '
-        Me.cust_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.cust_id.HeaderText = "Customer ID"
-        Me.cust_id.Name = "cust_id"
-        Me.cust_id.ReadOnly = True
-        '
-        'full_name
-        '
-        Me.full_name.HeaderText = "Full Name"
-        Me.full_name.Name = "full_name"
-        Me.full_name.ReadOnly = True
-        '
-        'gender
-        '
-        Me.gender.HeaderText = "Gender"
-        Me.gender.Name = "gender"
-        Me.gender.ReadOnly = True
-        '
-        'contact_num
-        '
-        Me.contact_num.HeaderText = "Contact #"
-        Me.contact_num.Name = "contact_num"
-        Me.contact_num.ReadOnly = True
-        '
-        'address
-        '
-        Me.address.HeaderText = "Address"
-        Me.address.Name = "address"
-        Me.address.ReadOnly = True
-        Me.address.Width = 200
+        Me.invisible_data.AutoSize = True
+        Me.invisible_data.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.invisible_data.Location = New System.Drawing.Point(34, 21)
+        Me.invisible_data.Name = "invisible_data"
+        Me.invisible_data.Size = New System.Drawing.Size(39, 13)
+        Me.invisible_data.TabIndex = 16
+        Me.invisible_data.Text = "Label8"
         '
         'Customer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1069, 545)
+        Me.ClientSize = New System.Drawing.Size(1069, 592)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -394,4 +423,6 @@ Partial Class Customer
     Friend WithEvents gender As DataGridViewTextBoxColumn
     Friend WithEvents contact_num As DataGridViewTextBoxColumn
     Friend WithEvents address As DataGridViewTextBoxColumn
+    Friend WithEvents clear As Button
+    Friend WithEvents invisible_data As Label
 End Class

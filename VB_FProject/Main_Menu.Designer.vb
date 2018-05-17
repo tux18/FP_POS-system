@@ -34,7 +34,7 @@ Partial Class Main_Menu
         Me.for_motherboard = New System.Windows.Forms.Button()
         Me.for_processor = New System.Windows.Forms.Button()
         Me.user_info = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.user_name = New System.Windows.Forms.Label()
         Me.aa = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -188,7 +188,7 @@ Partial Class Main_Menu
         '
         'user_info
         '
-        Me.user_info.Controls.Add(Me.Label3)
+        Me.user_info.Controls.Add(Me.user_name)
         Me.user_info.Controls.Add(Me.aa)
         Me.user_info.Controls.Add(Me.Panel7)
         Me.user_info.Location = New System.Drawing.Point(3, 15)
@@ -196,16 +196,16 @@ Partial Class Main_Menu
         Me.user_info.Size = New System.Drawing.Size(247, 175)
         Me.user_info.TabIndex = 2
         '
-        'Label3
+        'user_name
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label3.Location = New System.Drawing.Point(112, 144)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(79, 15)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "User Name"
+        Me.user_name.AutoSize = True
+        Me.user_name.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.user_name.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.user_name.Location = New System.Drawing.Point(112, 144)
+        Me.user_name.Name = "user_name"
+        Me.user_name.Size = New System.Drawing.Size(79, 15)
+        Me.user_name.TabIndex = 8
+        Me.user_name.Text = "User Name"
         '
         'aa
         '
@@ -622,7 +622,7 @@ Partial Class Main_Menu
     Friend WithEvents Button8 As Button
     Friend WithEvents Panel5 As Panel
     Friend WithEvents main_logout As Panel
-    Friend WithEvents Label3 As Label
+    Friend WithEvents user_name As Label
     Friend WithEvents aa As Label
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Label4 As Label
