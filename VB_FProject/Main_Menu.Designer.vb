@@ -47,6 +47,7 @@ Partial Class Main_Menu
         Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.display_gender = New System.Windows.Forms.Label()
         Me.display_contact = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Customer_btn = New System.Windows.Forms.Button()
@@ -70,7 +71,6 @@ Partial Class Main_Menu
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.tooltip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.display_gender = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.user_info.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -322,6 +322,17 @@ Partial Class Main_Menu
         Me.Panel2.Size = New System.Drawing.Size(441, 215)
         Me.Panel2.TabIndex = 0
         '
+        'display_gender
+        '
+        Me.display_gender.AutoSize = True
+        Me.display_gender.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.display_gender.Location = New System.Drawing.Point(188, 99)
+        Me.display_gender.Name = "display_gender"
+        Me.display_gender.Size = New System.Drawing.Size(63, 18)
+        Me.display_gender.TabIndex = 6
+        Me.display_gender.Text = "Gender"
+        Me.display_gender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'display_contact
         '
         Me.display_contact.AutoSize = True
@@ -560,17 +571,6 @@ Partial Class Main_Menu
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(43, 36)
         Me.Panel9.TabIndex = 7
-        '
-        'display_gender
-        '
-        Me.display_gender.AutoSize = True
-        Me.display_gender.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.display_gender.Location = New System.Drawing.Point(188, 99)
-        Me.display_gender.Name = "display_gender"
-        Me.display_gender.Size = New System.Drawing.Size(63, 18)
-        Me.display_gender.TabIndex = 6
-        Me.display_gender.Text = "Gender"
-        Me.display_gender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Main_Menu
         '

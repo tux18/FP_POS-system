@@ -22,9 +22,10 @@ Public Class Main_Menu
     Private Sub Main_Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
         tooltip.SetToolTip(main_logout, "Log Out")
-        'display_name.Text = val1
-        'display_contact.Text = val2
-        'display_gender.Text = val3
+        display_name.Text = global_name
+        display_contact.Text = global_contact
+        display_gender.Text = global_gender
+        user_name.Text = global_login_user
 
     End Sub
 

@@ -25,6 +25,7 @@ Partial Class Crud
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.current_selection = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.for_peripherals = New System.Windows.Forms.Button()
         Me.for_gpu = New System.Windows.Forms.Button()
@@ -50,7 +51,8 @@ Partial Class Crud
         Me.p_price = New System.Windows.Forms.TextBox()
         Me.p_qty = New System.Windows.Forms.TextBox()
         Me.p_name = New System.Windows.Forms.TextBox()
-        Me.current_selection = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.invisible_data = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -81,6 +83,7 @@ Partial Class Crud
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.invisible_data)
         Me.Panel2.Controls.Add(Me.current_selection)
         Me.Panel2.Controls.Add(Me.Button5)
         Me.Panel2.Controls.Add(Me.for_peripherals)
@@ -93,6 +96,17 @@ Partial Class Crud
         Me.Panel2.Size = New System.Drawing.Size(233, 457)
         Me.Panel2.TabIndex = 1
         '
+        'current_selection
+        '
+        Me.current_selection.AutoSize = True
+        Me.current_selection.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.current_selection.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.current_selection.Location = New System.Drawing.Point(60, 21)
+        Me.current_selection.Name = "current_selection"
+        Me.current_selection.Size = New System.Drawing.Size(100, 22)
+        Me.current_selection.TabIndex = 1
+        Me.current_selection.Text = "Processor"
+        '
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.White
@@ -101,9 +115,9 @@ Partial Class Crud
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button5.Location = New System.Drawing.Point(0, 373)
+        Me.Button5.Location = New System.Drawing.Point(0, 406)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(233, 35)
+        Me.Button5.Size = New System.Drawing.Size(233, 51)
         Me.Button5.TabIndex = 9
         Me.Button5.Text = "Cancel"
         Me.Button5.UseVisualStyleBackColor = False
@@ -212,7 +226,7 @@ Partial Class Crud
         Me.change_items.Name = "change_items"
         Me.change_items.ReadOnly = True
         Me.change_items.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.change_items.Size = New System.Drawing.Size(519, 353)
+        Me.change_items.Size = New System.Drawing.Size(519, 376)
         Me.change_items.TabIndex = 3
         '
         'processor
@@ -243,6 +257,7 @@ Partial Class Crud
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.Button1)
         Me.Panel4.Controls.Add(Me.p_status)
         Me.Panel4.Controls.Add(Me.Label6)
         Me.Panel4.Controls.Add(Me.p_update)
@@ -288,7 +303,7 @@ Partial Class Crud
         Me.p_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.p_update.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p_update.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.p_update.Location = New System.Drawing.Point(44, 366)
+        Me.p_update.Location = New System.Drawing.Point(44, 404)
         Me.p_update.Name = "p_update"
         Me.p_update.Size = New System.Drawing.Size(254, 37)
         Me.p_update.TabIndex = 17
@@ -303,7 +318,7 @@ Partial Class Crud
         Me.p_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.p_delete.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p_delete.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.p_delete.Location = New System.Drawing.Point(44, 323)
+        Me.p_delete.Location = New System.Drawing.Point(44, 361)
         Me.p_delete.Name = "p_delete"
         Me.p_delete.Size = New System.Drawing.Size(254, 37)
         Me.p_delete.TabIndex = 16
@@ -318,7 +333,7 @@ Partial Class Crud
         Me.p_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.p_add.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p_add.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.p_add.Location = New System.Drawing.Point(44, 280)
+        Me.p_add.Location = New System.Drawing.Point(44, 318)
         Me.p_add.Name = "p_add"
         Me.p_add.Size = New System.Drawing.Size(254, 37)
         Me.p_add.TabIndex = 14
@@ -382,22 +397,36 @@ Partial Class Crud
         Me.p_name.Size = New System.Drawing.Size(254, 24)
         Me.p_name.TabIndex = 0
         '
-        'current_selection
+        'Button1
         '
-        Me.current_selection.AutoSize = True
-        Me.current_selection.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.current_selection.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.current_selection.Location = New System.Drawing.Point(60, 21)
-        Me.current_selection.Name = "current_selection"
-        Me.current_selection.Size = New System.Drawing.Size(100, 22)
-        Me.current_selection.TabIndex = 1
-        Me.current_selection.Text = "Processor"
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Button1.Location = New System.Drawing.Point(44, 275)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(254, 37)
+        Me.Button1.TabIndex = 21
+        Me.Button1.Text = "Clear"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'invisible_data
+        '
+        Me.invisible_data.AutoSize = True
+        Me.invisible_data.Location = New System.Drawing.Point(91, 361)
+        Me.invisible_data.Name = "invisible_data"
+        Me.invisible_data.Size = New System.Drawing.Size(28, 13)
+        Me.invisible_data.TabIndex = 10
+        Me.invisible_data.Text = "data"
+        Me.invisible_data.Visible = False
         '
         'Crud
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1089, 511)
+        Me.ClientSize = New System.Drawing.Size(1089, 543)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.change_items)
         Me.Controls.Add(Me.Panel3)
@@ -448,4 +477,6 @@ Partial Class Crud
     Friend WithEvents price As DataGridViewTextBoxColumn
     Friend WithEvents status As DataGridViewTextBoxColumn
     Friend WithEvents current_selection As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents invisible_data As Label
 End Class

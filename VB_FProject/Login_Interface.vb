@@ -28,12 +28,12 @@ Public Class Login_Interface
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles login.Click
         Dim getuser As String = user_name.Text
         Dim getpass As String = password.Text
-        Dim mm = New Main_Menu()
+
 
         Try
             conn.Open()
             ' Retrieve the user and password in database 
-            Dim query As String = "SELECT username,password,fname FROM accounts"
+            Dim query As String = "SELECT username,password,fname,lname FROM accounts"
             'Dim get_name_query As String = "SELECT fname From accounts"
             cmd = New MySqlCommand(query, conn)
 
@@ -41,11 +41,13 @@ Public Class Login_Interface
 
             While reader.Read
                 If reader.GetString("username").Equals(getuser) And reader.GetString("password").Equals(getpass) Then
-                    MessageBox.Show("Login Successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
+                    MessageBox.Show("Login Successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    global_login_user = reader.GetString("fname") + " " + reader.GetString("lname")
                     'reader.GetString("fname") -> this will retrieve the name in the Database
+                    Dim mm = New Main_Menu()
                     mm.Show()
-                    mm.user_name.Text = reader.GetString("fname")
+
 
                     flag = False
                     Exit While

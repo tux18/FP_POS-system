@@ -106,6 +106,7 @@
     <Compile Include="Generate_Receipt.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="globalVariables.vb" />
     <Compile Include="Login_Interface.Designer.vb">
       <DependentUpon>Login_Interface.vb</DependentUpon>
     </Compile>

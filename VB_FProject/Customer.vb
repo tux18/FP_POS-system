@@ -329,15 +329,27 @@ Public Class Customer
     End Sub
 
     Private Sub select_cust_Click(sender As Object, e As EventArgs) Handles select_cust.Click
+        Dim get_id = id_cust.Text
+        Dim get_name = fullname.Text
+        Dim get_contact = c_contact_number.Text
+        Dim get_address = full_address.Text
+        Dim get_gender = c_gender.Text
+
+        If get_id.Equals("") And get_name.Equals("") And get_contact.Equals("") And get_address.Equals("") _
+             And get_gender.Equals("") Then
+            MessageBox.Show("Select in the table to fill the data in the Fields", "Connection", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Me.Show()
+        Else
+            global_name = fullname.Text
+            global_contact = c_contact_number.Text
+            global_gender = c_gender.Text
+            Main_Menu.Show()
+            Me.Dispose()
+        End If
 
 
 
-        Main_Menu.display_name.Text = fullname.Text
-        Main_Menu.display_contact.Text = c_contact_number.Text
-        Main_Menu.display_gender.Text = c_gender.Text
-        Main_Menu.Show()
 
-        Me.Dispose()
 
     End Sub
 End Class
