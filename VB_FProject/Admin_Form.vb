@@ -32,10 +32,6 @@
 
         End If
 
-
-
-
-
     End Sub
 
     Private Sub Admin_Form_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

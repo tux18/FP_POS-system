@@ -35,6 +35,12 @@ Public Class Crud
 
     Private Sub for_processor_Click(sender As Object, e As EventArgs) Handles for_processor.Click
 
+        p_name.Text = ""
+        p_qty.Text = ""
+        p_price.Text = ""
+        p_status.Text = ""
+
+
 
         ' The Code Below will fix the adding or displaying in the table
         ' where the problem is continous adding of value in the DataGridView
@@ -73,6 +79,12 @@ Public Class Crud
     End Sub
 
     Private Sub for_motherboard_Click(sender As Object, e As EventArgs) Handles for_motherboard.Click
+
+        p_name.Text = ""
+        p_qty.Text = ""
+        p_price.Text = ""
+        p_status.Text = ""
+
         change_items.Rows.Clear() ' The DataGridView will Clear all the Remaining Data
         dt.Rows.Clear() ' Data Table that holds the value from Data Source will be cleared
 
@@ -102,6 +114,11 @@ Public Class Crud
     End Sub
 
     Private Sub for_ram_Click(sender As Object, e As EventArgs) Handles for_ram.Click
+
+        p_name.Text = ""
+        p_qty.Text = ""
+        p_price.Text = ""
+        p_status.Text = ""
         current_selection.Text = "RAM"
 
         ' The Code Below will fix the adding or displaying in the table
@@ -138,6 +155,10 @@ Public Class Crud
     End Sub
 
     Private Sub for_gpu_Click(sender As Object, e As EventArgs) Handles for_gpu.Click
+        p_name.Text = ""
+        p_qty.Text = ""
+        p_price.Text = ""
+        p_status.Text = ""
         current_selection.Text = "Graphics Card"
 
         ' The Code Below will fix the adding or displaying in the table
@@ -169,6 +190,12 @@ Public Class Crud
     End Sub
 
     Private Sub for_peripherals_Click(sender As Object, e As EventArgs) Handles for_peripherals.Click
+
+        p_name.Text = ""
+        p_qty.Text = ""
+        p_price.Text = ""
+        p_status.Text = ""
+
         current_selection.Text = "Peripherals"
 
         ' The Code Below will fix the adding or displaying in the table

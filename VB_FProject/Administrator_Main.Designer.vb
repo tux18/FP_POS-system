@@ -26,23 +26,23 @@ Partial Class Administrator_Main
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.delete = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.purchase = New System.Windows.Forms.Button()
+        Me.unblock = New System.Windows.Forms.Button()
+        Me.block = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.account_holder = New System.Windows.Forms.DataGridView()
         Me.username = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.password = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.account_holder, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,10 +69,10 @@ Partial Class Administrator_Main
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Button3)
+        Me.Panel2.Controls.Add(Me.delete)
         Me.Panel2.Controls.Add(Me.Button2)
-        Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.purchase)
+        Me.Panel2.Controls.Add(Me.unblock)
+        Me.Panel2.Controls.Add(Me.block)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Location = New System.Drawing.Point(-43, 100)
@@ -80,20 +80,20 @@ Partial Class Administrator_Main
         Me.Panel2.Size = New System.Drawing.Size(362, 509)
         Me.Panel2.TabIndex = 2
         '
-        'Button3
+        'delete
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(76, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Location = New System.Drawing.Point(83, 291)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(236, 37)
-        Me.Button3.TabIndex = 15
-        Me.Button3.Text = "Delete User"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.delete.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.delete.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(76, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.delete.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.delete.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.delete.Location = New System.Drawing.Point(83, 291)
+        Me.delete.Name = "delete"
+        Me.delete.Size = New System.Drawing.Size(236, 37)
+        Me.delete.TabIndex = 15
+        Me.delete.Text = "Delete User"
+        Me.delete.UseVisualStyleBackColor = False
         '
         'Button2
         '
@@ -110,35 +110,35 @@ Partial Class Administrator_Main
         Me.Button2.Text = "Logout"
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Button1
+        'unblock
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(83, 205)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(236, 37)
-        Me.Button1.TabIndex = 13
-        Me.Button1.Text = "Unblock User"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.unblock.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.unblock.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.unblock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.unblock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.unblock.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.unblock.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.unblock.Location = New System.Drawing.Point(83, 205)
+        Me.unblock.Name = "unblock"
+        Me.unblock.Size = New System.Drawing.Size(236, 37)
+        Me.unblock.TabIndex = 13
+        Me.unblock.Text = "Unblock User"
+        Me.unblock.UseVisualStyleBackColor = False
         '
-        'purchase
+        'block
         '
-        Me.purchase.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(34, Byte), Integer))
-        Me.purchase.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.purchase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(76, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.purchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.purchase.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.purchase.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.purchase.Location = New System.Drawing.Point(83, 248)
-        Me.purchase.Name = "purchase"
-        Me.purchase.Size = New System.Drawing.Size(236, 37)
-        Me.purchase.TabIndex = 12
-        Me.purchase.Text = "Block User"
-        Me.purchase.UseVisualStyleBackColor = False
+        Me.block.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(34, Byte), Integer))
+        Me.block.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.block.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(76, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.block.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.block.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.block.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.block.Location = New System.Drawing.Point(83, 248)
+        Me.block.Name = "block"
+        Me.block.Size = New System.Drawing.Size(236, 37)
+        Me.block.TabIndex = 12
+        Me.block.Text = "Block User"
+        Me.block.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -160,35 +160,15 @@ Partial Class Administrator_Main
         Me.Panel3.Size = New System.Drawing.Size(200, 145)
         Me.Panel3.TabIndex = 0
         '
-        'DataGridView1
+        'account_holder
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.username, Me.password, Me.fname, Me.lname, Me.status})
-        Me.DataGridView1.Location = New System.Drawing.Point(325, 149)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(554, 382)
-        Me.DataGridView1.TabIndex = 1
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
-        Me.Panel4.Controls.Add(Me.Label2)
-        Me.Panel4.Location = New System.Drawing.Point(325, 100)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(844, 43)
-        Me.Panel4.TabIndex = 3
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(18, 10)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(154, 24)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Registered Users"
+        Me.account_holder.AllowUserToAddRows = False
+        Me.account_holder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.account_holder.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.username, Me.password, Me.fname, Me.lname, Me.status})
+        Me.account_holder.Location = New System.Drawing.Point(325, 149)
+        Me.account_holder.Name = "account_holder"
+        Me.account_holder.Size = New System.Drawing.Size(554, 382)
+        Me.account_holder.TabIndex = 1
         '
         'username
         '
@@ -223,6 +203,26 @@ Partial Class Administrator_Main
         Me.status.ReadOnly = True
         Me.status.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.Label2)
+        Me.Panel4.Location = New System.Drawing.Point(325, 100)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(844, 43)
+        Me.Panel4.TabIndex = 3
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label2.Location = New System.Drawing.Point(18, 10)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(154, 24)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Registered Users"
+        '
         'Administrator_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -230,7 +230,7 @@ Partial Class Administrator_Main
         Me.ClientSize = New System.Drawing.Size(882, 538)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.account_holder)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Administrator_Main"
@@ -239,7 +239,7 @@ Partial Class Administrator_Main
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.account_holder, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
@@ -252,11 +252,11 @@ Partial Class Administrator_Main
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents purchase As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents block As Button
+    Friend WithEvents unblock As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents delete As Button
+    Friend WithEvents account_holder As DataGridView
     Friend WithEvents username As DataGridViewTextBoxColumn
     Friend WithEvents password As DataGridViewTextBoxColumn
     Friend WithEvents fname As DataGridViewTextBoxColumn
