@@ -56,7 +56,7 @@ Public Class Customer
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles cancel_cust.Click
-        Me.Dispose() ' Cancel Button
+        Me.Hide() ' Cancel Button
         Main_Menu.Show()
     End Sub
 
@@ -343,8 +343,9 @@ Public Class Customer
             global_name = fullname.Text
             global_contact = c_contact_number.Text
             global_gender = c_gender.Text
-            Main_Menu.Show()
+
             Me.Dispose()
+            Main_Menu.Show()
         End If
 
 

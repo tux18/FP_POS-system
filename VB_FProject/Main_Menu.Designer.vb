@@ -24,8 +24,8 @@ Partial Class Main_Menu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main_Menu))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.peripherals = New System.Windows.Forms.Button()
@@ -49,9 +49,8 @@ Partial Class Main_Menu
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.display_gender = New System.Windows.Forms.Label()
         Me.display_contact = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.remove_item = New System.Windows.Forms.Button()
         Me.Customer_btn = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.display_name = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
@@ -63,10 +62,11 @@ Partial Class Main_Menu
         Me.purchase = New System.Windows.Forms.Button()
         Me.search = New System.Windows.Forms.TextBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.sum = New System.Windows.Forms.Button()
         Me.payment = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.total = New System.Windows.Forms.Label()
+        Me.overall_total = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -273,8 +273,8 @@ Partial Class Main_Menu
         '
         'prodname
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.prodname.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.prodname.DefaultCellStyle = DataGridViewCellStyle5
         Me.prodname.HeaderText = "Product Name"
         Me.prodname.Name = "prodname"
         Me.prodname.ReadOnly = True
@@ -312,9 +312,8 @@ Partial Class Main_Menu
         '
         Me.Panel2.Controls.Add(Me.display_gender)
         Me.Panel2.Controls.Add(Me.display_contact)
-        Me.Panel2.Controls.Add(Me.Button8)
+        Me.Panel2.Controls.Add(Me.remove_item)
         Me.Panel2.Controls.Add(Me.Customer_btn)
-        Me.Panel2.Controls.Add(Me.Button5)
         Me.Panel2.Controls.Add(Me.display_name)
         Me.Panel2.Controls.Add(Me.Panel4)
         Me.Panel2.Location = New System.Drawing.Point(3, 3)
@@ -344,19 +343,19 @@ Partial Class Main_Menu
         Me.display_contact.Text = "Contact Number"
         Me.display_contact.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button8
+        'remove_item
         '
-        Me.Button8.BackColor = System.Drawing.Color.Red
-        Me.Button8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button8.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button8.Location = New System.Drawing.Point(298, 133)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(121, 64)
-        Me.Button8.TabIndex = 4
-        Me.Button8.Text = "Remove"
-        Me.tooltip.SetToolTip(Me.Button8, "Select and Remove the Selected Items in the Customer Items")
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.remove_item.BackColor = System.Drawing.Color.Red
+        Me.remove_item.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.remove_item.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.remove_item.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.remove_item.Location = New System.Drawing.Point(231, 133)
+        Me.remove_item.Name = "remove_item"
+        Me.remove_item.Size = New System.Drawing.Size(129, 64)
+        Me.remove_item.TabIndex = 4
+        Me.remove_item.Text = "Remove Item"
+        Me.tooltip.SetToolTip(Me.remove_item, "Select and Remove the Selected Items in the Customer Items")
+        Me.remove_item.UseVisualStyleBackColor = False
         '
         'Customer_btn
         '
@@ -364,30 +363,13 @@ Partial Class Main_Menu
         Me.Customer_btn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Customer_btn.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Customer_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Customer_btn.Location = New System.Drawing.Point(149, 133)
+        Me.Customer_btn.Location = New System.Drawing.Point(65, 133)
         Me.Customer_btn.Name = "Customer_btn"
-        Me.Customer_btn.Size = New System.Drawing.Size(143, 64)
+        Me.Customer_btn.Size = New System.Drawing.Size(134, 64)
         Me.Customer_btn.TabIndex = 3
         Me.Customer_btn.Text = "Customer"
         Me.tooltip.SetToolTip(Me.Customer_btn, "Name of the Customer")
         Me.Customer_btn.UseVisualStyleBackColor = False
-        '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(156, Byte), Integer), CType(CType(18, Byte), Integer))
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button5.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(15, 133)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(130, 64)
-        Me.Button5.TabIndex = 2
-        Me.Button5.Text = "Clear"
-        Me.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.tooltip.SetToolTip(Me.Button5, "Clear the List of the Customer Items")
-        Me.Button5.UseVisualStyleBackColor = False
         '
         'display_name
         '
@@ -441,8 +423,8 @@ Partial Class Main_Menu
         '
         'DataGridViewTextBoxColumn1
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridViewTextBoxColumn1.HeaderText = "Product Name"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
@@ -489,16 +471,27 @@ Partial Class Main_Menu
         '
         'Panel5
         '
+        Me.Panel5.Controls.Add(Me.sum)
         Me.Panel5.Controls.Add(Me.payment)
         Me.Panel5.Controls.Add(Me.Label5)
         Me.Panel5.Controls.Add(Me.Label4)
-        Me.Panel5.Controls.Add(Me.total)
+        Me.Panel5.Controls.Add(Me.overall_total)
         Me.Panel5.Controls.Add(Me.Label2)
         Me.Panel5.Controls.Add(Me.Panel6)
         Me.Panel5.Location = New System.Drawing.Point(272, 451)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(513, 114)
         Me.Panel5.TabIndex = 6
+        '
+        'sum
+        '
+        Me.sum.Location = New System.Drawing.Point(150, 61)
+        Me.sum.Name = "sum"
+        Me.sum.Size = New System.Drawing.Size(113, 45)
+        Me.sum.TabIndex = 7
+        Me.sum.Text = "Compute All"
+        Me.tooltip.SetToolTip(Me.sum, "calculate the total in the customer items")
+        Me.sum.UseVisualStyleBackColor = True
         '
         'payment
         '
@@ -510,7 +503,7 @@ Partial Class Main_Menu
         Me.payment.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.payment.Location = New System.Drawing.Point(12, 61)
         Me.payment.Name = "payment"
-        Me.payment.Size = New System.Drawing.Size(179, 45)
+        Me.payment.Size = New System.Drawing.Size(132, 45)
         Me.payment.TabIndex = 6
         Me.payment.Text = "Payment"
         Me.payment.UseVisualStyleBackColor = False
@@ -535,15 +528,15 @@ Partial Class Main_Menu
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "₱"
         '
-        'total
+        'overall_total
         '
-        Me.total.AutoSize = True
-        Me.total.Font = New System.Drawing.Font("Agency FB", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.total.Location = New System.Drawing.Point(330, 64)
-        Me.total.Name = "total"
-        Me.total.Size = New System.Drawing.Size(69, 42)
-        Me.total.TabIndex = 2
-        Me.total.Text = "0.00"
+        Me.overall_total.AutoSize = True
+        Me.overall_total.Font = New System.Drawing.Font("Agency FB", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.overall_total.Location = New System.Drawing.Point(330, 64)
+        Me.overall_total.Name = "overall_total"
+        Me.overall_total.Size = New System.Drawing.Size(69, 42)
+        Me.overall_total.TabIndex = 2
+        Me.overall_total.Text = "0.00"
         '
         'Label2
         '
@@ -627,19 +620,18 @@ Partial Class Main_Menu
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Customer_btn As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents display_name As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents purchase As Button
     Friend WithEvents search As TextBox
-    Friend WithEvents Button8 As Button
+    Friend WithEvents remove_item As Button
     Friend WithEvents Panel5 As Panel
     Friend WithEvents main_logout As Panel
     Friend WithEvents user_name As Label
     Friend WithEvents aa As Label
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Label4 As Label
-    Friend WithEvents total As Label
+    Friend WithEvents overall_total As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel9 As Panel
@@ -656,4 +648,5 @@ Partial Class Main_Menu
     Friend WithEvents peripherals As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents display_gender As Label
+    Friend WithEvents sum As Button
 End Class

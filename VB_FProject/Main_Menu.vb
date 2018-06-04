@@ -29,6 +29,7 @@ Public Class Main_Menu
         user_name.Text = global_login_user
         global_customer_items = customer_items
         global_system_items = system_items
+
     End Sub
 
     Private Sub Main_Menu_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -57,7 +58,7 @@ Public Class Main_Menu
 
         Try
             Dim query As String = "select * from processor_items"
-            
+
             Dim ds As New DataSet()
             cmd = New MySqlCommand(query, conn)
             'adt.Fill(ds, "processor_items")
@@ -201,9 +202,17 @@ Public Class Main_Menu
         'Dim customer = New Customer_Info()
         'customer.ShowDialog()
 
+
         Dim customer = New Customer()
+
         customer.Show()
+        'Me.Hide()
         Me.Dispose()
+
+
+
+
+
 
 
     End Sub
@@ -217,33 +226,46 @@ Public Class Main_Menu
         Dim get_price As Integer
         Dim get_status As String
 
-        Try
-            a = system_items.CurrentRow.Index
-            Dim p_item = New selected_item
 
-            get_name = system_items.Rows(a).Cells(0).Value
-            get_qty = system_items.Rows(a).Cells(1).Value
-            get_price = system_items.Rows(a).Cells(2).Value
-            get_status = system_items.Rows(a).Cells(3).Value
-
-            p_item.pname.Text = get_name
-            p_item.qty.Text = get_qty
-            p_item.price.Text = get_price
-            p_item.status.Text = get_status
+        If display_name.Text.Equals("Customer Name") And display_contact.Text.Equals("Contact Number") And
+                display_gender.Text.Equals("Gender") Then
+            MessageBox.Show("Please Pick Customer..",
+                         "Customer Selection", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
 
 
-            p_item.Show()
-
-        Catch ex As Exception
-            MessageBox.Show("Please Select in the Table to Purchase the item",
-                   "Quantity", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End Try
-
-        'MsgBox(db_tname)
+            Try
 
 
+                a = system_items.CurrentRow.Index
+                Dim p_item = New selected_item
+
+                get_name = system_items.Rows(a).Cells(0).Value
+                get_qty = system_items.Rows(a).Cells(1).Value
+                get_price = system_items.Rows(a).Cells(2).Value
+                get_status = system_items.Rows(a).Cells(3).Value
+
+                p_item.pname.Text = get_name
+                p_item.qty.Text = get_qty
+                p_item.price.Text = get_price
+                p_item.status.Text = get_status
 
 
+                p_item.Show()
+
+
+
+
+            Catch ex As Exception
+                MessageBox.Show("Please Select in the Table to Purchase the item",
+                       "Quantity", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End Try
+
+            'MsgBox(db_tname)
+
+
+
+        End If
 
 
 
@@ -294,7 +316,106 @@ Public Class Main_Menu
 
 
 
-    Private Sub system_items_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles system_items.CellClick
+
+
+    Private Sub sum_Click(sender As Object, e As EventArgs) Handles sum.Click
+        overall_total.Text = String.Format(global_overall_total, "c")
+    End Sub
+
+    Private Sub remove_item_Click(sender As Object, e As EventArgs) Handles remove_item.Click
+
+        Dim get_name As String
+        Dim get_qty As Integer
+        Dim get_total As Integer
+
+
+        Dim get_select = customer_items.CurrentRow.Index
+
+        get_name = customer_items.Rows(get_select).Cells(0).Value
+        'get_qty = customer_items.Rows(get_select).Cells(1).Value
+        get_total = customer_items.Rows(get_select).Cells(2).Value
+
+        Dim get_row_count = system_items.Rows.Count
+        get_qty = customer_items.Rows(get_select).Cells(1).Value
+        Dim i As Integer
+        Dim update_qty As Integer
+        For i = 0 To get_row_count - 1
+
+            If system_items.Rows(i).Cells(0).Value.Equals(get_name) Then
+
+                system_items.Rows(i).Cells(1).Value += CInt(get_qty)
+                update_qty = system_items.Rows(i).Cells(1).Value
+
+                customer_items.Rows.RemoveAt(get_select)
+                global_overall_total -= get_total
+                overall_total.Text = String.Format(global_overall_total, "c")
+                Try
+                    conn.Open()
+                    Dim query As String = "UPDATE " & "processor_items" & " SET qty=" & "'" & Math.Abs(update_qty) _
+                    & "'" & " WHERE item_name = " & "'" & get_name & "'"
+                    cmd = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+                    conn.Close()
+                Catch ex As Exception
+
+                End Try
+
+
+                Try
+                    conn.Open()
+                    Dim query As String = "UPDATE " & "motherboard_items" & " SET qty=" & "'" & Math.Abs(update_qty) _
+                    & "'" & " WHERE item_name = " & "'" & get_name & "'"
+                    cmd = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+                    conn.Close()
+                Catch ex As Exception
+
+                End Try
+
+                Try
+                    conn.Open()
+                    Dim query As String = "UPDATE " & "ram_items" & " SET qty=" & "'" & Math.Abs(update_qty) _
+                    & "'" & " WHERE item_name = " & "'" & get_name & "'"
+                    cmd = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+                    conn.Close()
+                Catch ex As Exception
+
+                End Try
+
+                Try
+                    conn.Open()
+                    Dim query As String = "UPDATE " & "gpu_items" & " SET qty=" & "'" & Math.Abs(update_qty) _
+                    & "'" & " WHERE item_name = " & "'" & get_name & "'"
+                    cmd = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+                    conn.Close()
+                Catch ex As Exception
+
+                End Try
+
+                Try
+                    conn.Open()
+                    Dim query As String = "UPDATE " & "peripheral_items" & " SET qty=" & "'" & Math.Abs(update_qty) _
+                    & "'" & " WHERE item_name = " & "'" & get_name & "'"
+                    cmd = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+                    conn.Close()
+                Catch ex As Exception
+
+                End Try
+
+
+            End If
+        Next
+
+        ' MessageBox.Show(system_items.Rows(i).Cells(0).Value, "Connection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+
+
+
+
+
 
 
 

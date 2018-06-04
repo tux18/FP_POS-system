@@ -30,10 +30,10 @@ Partial Class Purchased_Items
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.change = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.total_value = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.money_bill = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -58,10 +58,10 @@ Partial Class Purchased_Items
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.change)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.total_value)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.money_bill)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -135,15 +135,15 @@ Partial Class Purchased_Items
         Me.Label6.TabIndex = 7
         Me.Label6.Text = "₱"
         '
-        'Label7
+        'change
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(165, 206)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(37, 24)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "0.00"
+        Me.change.AutoSize = True
+        Me.change.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.change.Location = New System.Drawing.Point(165, 206)
+        Me.change.Name = "change"
+        Me.change.Size = New System.Drawing.Size(37, 24)
+        Me.change.TabIndex = 6
+        Me.change.Text = "0.00"
         '
         'Label5
         '
@@ -166,16 +166,16 @@ Partial Class Purchased_Items
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "₱"
         '
-        'Label3
+        'total_value
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Lime
-        Me.Label3.Location = New System.Drawing.Point(165, 91)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 24)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "0.00"
+        Me.total_value.AutoSize = True
+        Me.total_value.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.total_value.ForeColor = System.Drawing.Color.Lime
+        Me.total_value.Location = New System.Drawing.Point(165, 91)
+        Me.total_value.Name = "total_value"
+        Me.total_value.Size = New System.Drawing.Size(37, 24)
+        Me.total_value.TabIndex = 3
+        Me.total_value.Text = "0.00"
         '
         'Label2
         '
@@ -190,9 +190,9 @@ Partial Class Purchased_Items
         'money_bill
         '
         Me.money_bill.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.money_bill.Location = New System.Drawing.Point(133, 14)
+        Me.money_bill.Location = New System.Drawing.Point(169, 14)
         Me.money_bill.Name = "money_bill"
-        Me.money_bill.Size = New System.Drawing.Size(170, 26)
+        Me.money_bill.Size = New System.Drawing.Size(134, 26)
         Me.money_bill.TabIndex = 1
         '
         'Label1
@@ -201,9 +201,9 @@ Partial Class Purchased_Items
         Me.Label1.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(9, 17)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(118, 18)
+        Me.Label1.Size = New System.Drawing.Size(151, 18)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Customer Bill: "
+        Me.Label1.Text = "Customer Payment:"
         '
         'Panel3
         '
@@ -236,10 +236,10 @@ Partial Class Purchased_Items
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents total_value As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents change As Label
     Friend WithEvents dynamic_pay As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel4 As Panel

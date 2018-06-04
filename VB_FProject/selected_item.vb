@@ -62,7 +62,7 @@ Public Class selected_item
 
     Private Sub btn_purchase_Click(sender As Object, e As EventArgs) Handles btn_purchase.Click
 
-
+        Dim obj = New Main_Menu
 
         Dim st As String = status.Text
 
@@ -81,11 +81,15 @@ Public Class selected_item
                 If user_input <= quantity Then
                     total = user_input - quantity
                     'MessageBox.Show(total, "Quantity", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Dim query As String = "UPDATE " & global_table_name & " SET qty=" & "'" & total & "'" & " WHERE item_name = " & "'" & pname.Text & "'"
+
+                    Dim query As String = "UPDATE " & global_table_name & " SET qty=" & "'" & Math.Abs(total) & "'" & " WHERE item_name = " & "'" & pname.Text & "'"
                     cmd = New MySqlCommand(query, conn)
                     cmd.ExecuteNonQuery()
                     total_amount = get_price * user_input
+
                     global_customer_items.Rows.Add(New String() {pname.Text, CStr(user_input), CStr(total_amount)})
+
+                    global_overall_total += CInt(total_amount)
 
 
                     If total.Equals(0) Then

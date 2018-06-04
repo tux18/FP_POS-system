@@ -7,7 +7,7 @@
 
     Public global_table_name As String = ""
 
-    Public global_overall_total As String = "" ' This will handle to overall total of purchased items
+    Public global_overall_total As Integer ' This will handle to overall total of purchased items
 
     ' MAKE THE GLOBAL Object of DATAGRIDVIEW to ACCESS IT TO ANY FORM
     Public global_customer_items As Object
