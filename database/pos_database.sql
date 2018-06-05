@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2018 at 06:23 PM
+-- Generation Time: Jun 05, 2018 at 02:35 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -32,21 +32,21 @@ CREATE TABLE `accounts` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `fname` varchar(255) NOT NULL,
-  `lname` varchar(255) NOT NULL
+  `lname` varchar(255) NOT NULL,
+  `status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`username`, `password`, `fname`, `lname`) VALUES
-('asdasd', 'asdasd', 'asdasd', 'fdgfdg'),
-('google', 'google', 'googleman', 'wanpage'),
-('Mike', 'asdasd', 'asdasd', 'fdgfdg'),
-('qweqwe', 'asdqwe', 'dfgfdg', 'fdgdg'),
-('test', 'test', 'Justin', 'Tuqs'),
-('test123', 'qwe', 'Junior', 'Barrow'),
-('tom123', '11111', 'James', 'Tom');
+INSERT INTO `accounts` (`username`, `password`, `fname`, `lname`, `status`) VALUES
+('google', 'google', 'googleman', 'wanpage', 'unblock'),
+('Mike', 'asdasd', 'asdasd', 'fdgfdg', 'unblock'),
+('qweqwe', 'asdqwe', 'dfgfdg', 'fdgdg', 'unblock'),
+('test', 'test', 'Justin', 'Tuqs', 'block'),
+('test123', 'qwe', 'Junior', 'Barrow', 'unblock'),
+('tom123', '11111', 'James', 'Tom', 'unblock');
 
 -- --------------------------------------------------------
 
@@ -59,20 +59,19 @@ CREATE TABLE `customer` (
   `full_name` varchar(255) NOT NULL,
   `gender` varchar(255) NOT NULL,
   `contact_num` varchar(25) NOT NULL,
-  `address` varchar(255) NOT NULL
+  `address` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for Customer';
 
 --
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`cust_id`, `full_name`, `gender`, `contact_num`, `address`) VALUES
-('001', 'Robert Downy', 'Male', '09356669922', 'Alpha Centaurus'),
-('03342', 'Jonathan Millers', 'Male', '00100101010', 'Capella Centaurus'),
-('1111', 'Helloq', 'Male', '9098765', 'Bonzayzzz'),
-('23232', 'qwe', 'Male', '879797', 'rtt'),
-('23344', 'Jobert Norma', 'MALE', '0022222333', 'Aurora Regalus'),
-('5555', 'Justin', 'Male', '099999999', 'San Agustin');
+INSERT INTO `customer` (`cust_id`, `full_name`, `gender`, `contact_num`, `address`, `status`) VALUES
+('001', 'Robert Downy', 'Male', '09356669922', 'Alpha Centaurus', 'ACTIVE'),
+('03342', 'Jonathan Millers', 'Male', '00100101010', 'Capella Centaurus', ''),
+('1111', 'Helloq', 'Male', '9098765', 'Bonzayzzz', ''),
+('23344', 'Jobert Norma', 'MALE', '0022222333', 'Aurora Regalus', '');
 
 -- --------------------------------------------------------
 
@@ -95,7 +94,7 @@ INSERT INTO `gpu_items` (`item_name`, `qty`, `price`, `status`) VALUES
 ('AMD Radeon RX560 4GB OC', '5', '9000', 'On-Stock'),
 ('Geforce 210 1GB DDR3 64 Bit', '2', '1600', 'On-Stock'),
 ('GeForce GT 730 2GB DDR3', '5', '3400', 'On-Stock'),
-('GeForce GTX1050 TI 4GB 128Bit', '10', '9700', 'On-Stock'),
+('GeForce GTX1050 TI 4GB 128Bit', '15', '9700', 'On-Stock'),
 ('Palit GTX1060 6GB', '5', '18000', 'On-Stock'),
 ('Zotac GTX1050 Ti OC 4GB 128Bit', '10', '10000', 'On-Stock');
 
@@ -128,21 +127,18 @@ INSERT INTO `motherboard_items` (`item_name`, `qty`, `price`, `status`) VALUES
 --
 
 CREATE TABLE `peripheral_items` (
-  `item_name` varchar(255) NOT NULL,
-  `price` varchar(255) NOT NULL,
-  `qty` varchar(15) NOT NULL,
-  `status` varchar(100) NOT NULL
+  `item_name` varchar(200) NOT NULL,
+  `qty` varchar(50) NOT NULL,
+  `price` varchar(100) NOT NULL,
+  `status` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `peripheral_items`
 --
 
-INSERT INTO `peripheral_items` (`item_name`, `price`, `qty`, `status`) VALUES
-('A4tech KRS-83 Keyboard', '350', '50', 'On-Stock'),
-('Dell KB212-B USB Keyboard', '400', '15', 'On-Stock'),
-('Logitech B100 Mouse', '250', '15', 'On-Stock'),
-('Zeus M-110 Gaming Mouse', '150', '15', 'On-Stock');
+INSERT INTO `peripheral_items` (`item_name`, `qty`, `price`, `status`) VALUES
+('A4Tech Mouse', '30', '160', 'On-Stock');
 
 -- --------------------------------------------------------
 
@@ -162,18 +158,19 @@ CREATE TABLE `processor_items` (
 --
 
 INSERT INTO `processor_items` (`item_name`, `qty`, `price`, `status`) VALUES
-('AMD A6-6400K', '25', '2500', 'On-Stock'),
-('AMD A8-7650k(Quad-Core)', '30', '4000', 'On-Stock'),
-('AMD A8-9600 Processor', '20', '3700', 'On-Stock'),
+('AMD A6-5400', '17', '3000', 'On-Stock'),
+('AMD A6-6400K', '18', '2500', 'On-Stock'),
+('AMD A8-7650k(Quad-Core)', '8', '4000', 'On-Stock'),
+('AMD A8-9600 Processor', '21', '3700', 'On-Stock'),
 ('Intel Core 4460', '10', '8600', 'On-Stock'),
 ('Intel Core i3-7100', '20', '6500', 'On-Stock'),
 ('Intel Core i5-8400', '20', '10299', 'On-Stock'),
 ('Intel Core i7-8700', '10', '16000', 'On-Stock'),
-('Intel Core i7-8700k', '10', '21000', 'On-Stock'),
+('Intel Core i7-8700k', '5', '21000', 'On-Stock'),
 ('Intel i7-7700K', '10', '18000', 'On-Stock'),
 ('Intel Pentium G4400', '30', '3000', 'On-Stock'),
 ('Intel Pentium G4560', '20', '3120', 'On-Stock'),
-('Ryzen 1300', '10', '6200', 'On-Stock'),
+('Ryzen 1300', '5', '6200', 'On-Stock'),
 ('Ryzen 1300X', '5', '8500', 'On-Stock'),
 ('Ryzen 3 2200G Vega Graphics', '5', '6000', 'On-Stock'),
 ('Ryzen 5 2400G Vega Graphics', '10', '14000', 'On-Stock'),
@@ -197,7 +194,7 @@ CREATE TABLE `ram_items` (
 --
 
 INSERT INTO `ram_items` (`item_name`, `qty`, `price`, `status`) VALUES
-('Avexir 4GB 2400MHz DDR4', '15', '2800', 'On-Stock'),
+('Avexir 4GB 2400MHz DDR4', '14', '2800', 'On-Stock'),
 ('Corsair V 16GB 2400MHz DDR4', '20', '11000', 'On-Stock'),
 ('Gskill Aegis 4GB 2400MHz DDR4', '15', '2800', 'On-Stock'),
 ('Gskill Trident 16GB 3000MHz DDR4', '15', '14500', 'On-Stock'),

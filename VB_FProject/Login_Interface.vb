@@ -9,7 +9,7 @@ Public Class Login_Interface
     Dim reader As MySqlDataReader
 
 
-    Dim flag As Boolean = False
+
     Private Sub Customer_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
 
@@ -29,33 +29,36 @@ Public Class Login_Interface
         Dim getuser As String = user_name.Text
         Dim getpass As String = password.Text
 
-
+        Dim block As Boolean = False
+        Dim flag As Boolean = True
         Try
             conn.Open()
             ' Retrieve the user and password in database 
-            Dim query As String = "SELECT username,password,fname,lname FROM accounts"
+            Dim query As String = "SELECT username,password,fname,lname,status FROM accounts"
             'Dim get_name_query As String = "SELECT fname From accounts"
             cmd = New MySqlCommand(query, conn)
 
             reader = cmd.ExecuteReader
 
             While reader.Read
-                If reader.GetString("username").Equals(getuser) And reader.GetString("password").Equals(getpass) Then
-
+                If reader.GetString("username").Equals(getuser) And reader.GetString("password").Equals(getpass) And reader.GetString("status").Equals("unblock") Then
                     MessageBox.Show("Login Successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     global_login_user = reader.GetString("fname") + " " + reader.GetString("lname")
                     'reader.GetString("fname") -> this will retrieve the name in the Database
                     Dim mm = New Main_Menu()
                     mm.Show()
-
-
                     flag = False
+
                     Exit While
-                Else
+                ElseIf reader.GetString("username").Equals(getuser) And reader.GetString("password").Equals(getpass) And reader.GetString("status").Equals("block") Then
                     flag = True
-
+                    block = True
+                    Exit While
+                ElseIf reader.GetString("username").Equals(getuser) And reader.GetString("password").Equals(getpass) Then
+                    flag = True
+                    block = False
+                    Exit While
                 End If
-
             End While
 
             ' Close and Dispose the Connection
@@ -73,15 +76,28 @@ Public Class Login_Interface
 
         If flag.Equals(True) Then
 
-            MessageBox.Show("ERROR: Invalid Username or Password", "Authentication", MessageBoxButtons.OK, MessageBoxIcon.Error
-                                           )
-            Me.Dispose()
-            Dim obj As New Login_Interface
-            obj.Show()
-        Else
-            Me.Dispose()
+            If block.Equals(True) Then
+                MessageBox.Show("This username has been BLOCK", "Authentication", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Me.Dispose()
+                Dim obj As New Login_Interface
+                obj.Show()
+            ElseIf block.Equals(False) Then
+                MessageBox.Show("ERROR: Invalid Username or Password", "Authentication", MessageBoxButtons.OK, MessageBoxIcon.Error
+                                         )
+                Me.Dispose()
+                Dim obj As New Login_Interface
+                obj.Show()
+            End If
+
+
+
 
         End If
+
+
+
+
+
 
     End Sub
 

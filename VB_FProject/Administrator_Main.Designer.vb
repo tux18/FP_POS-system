@@ -167,6 +167,8 @@ Partial Class Administrator_Main
         Me.account_holder.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.username, Me.password, Me.fname, Me.lname, Me.status})
         Me.account_holder.Location = New System.Drawing.Point(325, 149)
         Me.account_holder.Name = "account_holder"
+        Me.account_holder.ReadOnly = True
+        Me.account_holder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.account_holder.Size = New System.Drawing.Size(554, 382)
         Me.account_holder.TabIndex = 1
         '

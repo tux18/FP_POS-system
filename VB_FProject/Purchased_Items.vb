@@ -1,4 +1,8 @@
-﻿Public Class Purchased_Items
+﻿Imports iTextSharp.text.pdf
+Imports iTextSharp.text
+Imports System.IO
+
+Public Class Purchased_Items
 
     Dim calculate As Integer
 

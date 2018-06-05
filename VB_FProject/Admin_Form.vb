@@ -22,7 +22,7 @@
         Dim getpass As String = password.Text
 
 
-        If getuser.Equals("admin") And getpass.Equals("admin12345") Then
+        If getuser.Equals("admin") And getpass.Equals("admin") Then
             Dim obj = New Administrator_Main()
             obj.Show()
             Me.Dispose()
